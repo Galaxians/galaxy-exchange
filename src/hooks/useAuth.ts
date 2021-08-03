@@ -35,6 +35,8 @@ const useAuth = () => {
             walletConnector.walletConnectProvider = null
           }
           toastError('Authorization Error', 'Please authorize to access your account')
+        } else if (error.message.indexOf('No Ethereum provider was found')) {
+          activate(connectorsByName[ConnectorNames.WalletConnect]);
         } else {
           toastError(error.name, error.message)
         }
