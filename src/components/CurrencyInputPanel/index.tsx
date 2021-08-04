@@ -112,7 +112,7 @@ export default function CurrencyInputPanel({
     <InputPanel id={id}>
       <Container hideInput={hideInput}>
         <div className="row">
-          <div className="col-auto" style={{ marginLeft: '25px', marginTop: '21px', width: '166px' }}>
+          <div className="col-auto" style={{ alignSelf: 'center', width: '166px' , marginLeft: '5px'}}>
             <CurrencySelect
               style={{ textAlign: 'left' }}
               selected={!!currency}
@@ -149,7 +149,7 @@ export default function CurrencyInputPanel({
           </div>
 
           <div className="col-auto p-2 swap-input">
-            <div className="dark-input rounded fs-2">
+            <div className="dark-input rounded fs-2" style={{marginRight: '10px'}}>
               {!hideInput && (
                 <LabelRow>
                   <RowBetween>

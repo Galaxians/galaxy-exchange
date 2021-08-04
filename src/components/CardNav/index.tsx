@@ -100,7 +100,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
                   borderRadius: '4px',
                   border: '1px solid #FF00FF',
                 }}
-                id="pool-nav-link"
+                id="bridge-nav-link"
                 as="a"
                 href="https://www.binance.org/en/bridge?utm_source=PancakeSwap"
                 target="_blank"
@@ -118,7 +118,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
                   background: '#271049',
                   borderRadius: '4px',
                 }}
-                id="pool-nav-link"
+                id="bridge-nav-link"
                 as="a"
                 href="https://www.binance.org/en/bridge?utm_source=PancakeSwap"
                 target="_blank"

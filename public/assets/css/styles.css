@@ -444,6 +444,33 @@ a:active {
     z-index: 999;
     font-size:30px;
     color: white;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+@media(max-width: 440px) {
+  #swap-nav-link {
+    width: 80px;
+  }
+  #pool-nav-link {
+    width:50px;
+  }
+  #bridge-nav-link {
+    width: 60px;
+  }
+  #swap-page {
+    margin-top: 40px;
+  }
+  .egkUeL {
+    padding: 0px !important;
+  }
+}
+
+@media(max-width: 330px) {
+  .navbar-brand {
+    margin-right: 0px;
+    margin-left: -40px;
   }
 }
 
