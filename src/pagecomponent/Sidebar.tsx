@@ -22,12 +22,7 @@ export default function Sidebar({ isOpen, toggle }) {
     const [isTag, setIsTag] = useState(false);
     return (
         <SidebarContainer isOpen={isOpen} onClick={toggle}>
-            <div>
-                <button type="submit" data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="/navcol-1" style={{ marginTop: '0px', marginLeft: 'px' }} onClick={toggle}>
-                <span className="visually-hidden">Toggle navigation</span>
-                <span className="navbar-toggler-icon text-white" />
-                </button>
-            </div>
+            <div className="navbar-toggler-mine">X</div>
             <div className="navbar-nav">
                 <ul className="list-unstyled">
                     <li className="left-exchange-icon">

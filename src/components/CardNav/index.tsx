@@ -16,9 +16,9 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
   const [onPresentSettings] = useModal(<SettingsModal translateString={TranslateString} />)
   const [onPresentRecentTransactions] = useModal(<RecentTransactionsModal translateString={TranslateString} />)
   return (
-    <StyledNav style={{ marginLeft: '25px', borderRadius: '4px' }}>
-      <div className="row mt-4">
-        <div className="col-auto" style={{ background: '#0B001E' }}>
+    <StyledNav style={{ borderRadius: '4px' }}>
+      <div className="row mt-4 justify-content-center">
+        <div className="col-auto" >
           <ButtonMenu activeIndex={activeIndex} scale="sm">
             {activeIndex === 0 ? (
               <ButtonMenuItem
