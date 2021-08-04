@@ -429,3 +429,24 @@ a:active {
   color: #ff1fff !important;
   text-transform: none;
 }
+
+@media(max-width : 991px) {
+  .navbar-nav {
+    margin-top: 100px;
+    z-index: 999;
+    height: 100%;
+    align-items: center;
+  }
+  .navbar-toggler-mine {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 999;
+    font-size:30px;
+    color: white;
+  }
+}
+
+.swap-input {
+  flex: 1;
+}
