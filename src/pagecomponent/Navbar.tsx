@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { useWeb3React } from '@web3-react/core'
 import useAuth from 'hooks/useAuth'
 
-export default function Navbar() {
+export default function Navbar({toggle}) {
   const { account, activate, deactivate } = useWeb3React()
   const { login, logout } = useAuth()
   //   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
@@ -19,12 +19,12 @@ export default function Navbar() {
 
   return (
     <div className="container-fluid top-nav-bg">
-      <nav className="navbar navbar-dark navbar-expand-xl">
+      <nav className="navbar navbar-dark navbar-expand-lg">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             <img src="./assets/img/galaxyswap-logo-color-800px.png" alt="Galaxy Swap" style={{width: "180px", marginLeft:'30px'}} />
             </a>         
-          <button type="submit" data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="/navcol-1" style={{marginTop:'0px', marginLeft:'px'}}>
+          <button type="submit" data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="/navcol-1" style={{marginTop:'0px', marginLeft:'px'}} onClick={toggle}>
             <span className="visually-hidden">Toggle navigation</span>
             <span className="navbar-toggler-icon text-white" />
           </button>

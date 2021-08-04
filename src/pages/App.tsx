@@ -23,6 +23,7 @@ import { LanguageContext } from '../hooks/LanguageContext'
 import { TranslationsContext } from '../hooks/TranslationsContext'
 
 import Menu from '../components/Menu'
+import Sidebar from "../pagecomponent/Sidebar"
 
 const AppWrapper = styled.div`
   display: flex;
@@ -42,7 +43,7 @@ const BodyWrapper = styled.div`
   z-index: 1;
   justify-content: center;
   background: transperent;
-  margin-left: -20px;
+  // margin-left: -20px;
   // margin-left: -160px;
 
   ${({ theme }) => theme.mediaQueries.xs} {
@@ -111,6 +112,11 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedLanguage])
 
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <Suspense fallback={null}>
       <HashRouter>
@@ -120,12 +126,12 @@ export default function App() {
           >
             <TranslationsContext.Provider value={{ translations, setTranslations }}>
               {/* <Menu> */}
-              <Navbar />
+              <Navbar toggle={toggle} />
               {/* <div className="row"> */}
+              <Sidebar isOpen={isOpen} toggle={toggle} />
               <div className="col-auto">
                 <Leftnav />
               </div>
-
               <BodyWrapper>
                 <Popups />
                 <Web3ReactManager>
