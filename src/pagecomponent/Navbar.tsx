@@ -40,7 +40,7 @@ export default function Navbar({toggle}) {
               {account ? (
                 <Button
                 className="btn text-white xrounded pink-gredient"
-                style={{marginLeft:'70px',height: '25px', width:'150px', fontSize:'12px'}}
+                style={{height: '25px', fontSize:'12px'}}
                   onClick={() => {
                     onPresentAccountModal()
                   }}
