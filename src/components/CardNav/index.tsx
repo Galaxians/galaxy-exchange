@@ -22,6 +22,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
           <ButtonMenu activeIndex={activeIndex} scale="sm">
             {activeIndex === 0 ? (
               <ButtonMenuItem
+                className="nav-menu-item"
                 style={{
                   paddingLeft: '25px',
                   paddingRight: '25px',
@@ -39,6 +40,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               </ButtonMenuItem>
             ) : (
               <ButtonMenuItem
+              className="nav-menu-item"
                 style={{
                   paddingLeft: '25px',
                   paddingRight: '25px',
@@ -56,6 +58,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
             )}
             {activeIndex === 1 ? (
               <ButtonMenuItem
+              className="nav-menu-item"
                 style={{
                   paddingLeft: '25px',
                   paddingRight: '25px',
@@ -73,6 +76,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               </ButtonMenuItem>
             ) : (
               <ButtonMenuItem
+              className="nav-menu-item"
                 style={{
                   paddingLeft: '25px',
                   paddingRight: '25px',
@@ -91,6 +95,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
 
             {activeIndex === 2 ? (
               <ButtonMenuItem
+              className="nav-menu-item"
                 style={{
                   paddingLeft: '25px',
                   paddingRight: '25px',
@@ -110,6 +115,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               </ButtonMenuItem>
             ) : (
               <ButtonMenuItem
+              className="nav-menu-item"
                 style={{
                   paddingLeft: '25px',
                   paddingRight: '25px',

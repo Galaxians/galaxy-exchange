@@ -112,7 +112,7 @@ export default function CurrencyInputPanel({
     <InputPanel id={id}>
       <Container hideInput={hideInput}>
         <div className="row">
-          <div className="col-auto" style={{ alignSelf: 'center', width: '166px' , marginLeft: '5px'}}>
+          <div className="col-auto symbol-input" style={{ alignSelf: 'center', width: '166px' , marginLeft: '5px'}}>
             <CurrencySelect
               style={{ textAlign: 'left' }}
               selected={!!currency}
@@ -134,7 +134,7 @@ export default function CurrencyInputPanel({
                     {pair?.token0.symbol}:{pair?.token1.symbol}
                   </Text>
                 ) : (
-                  <Text>
+                  <Text className="nav-menu-item">
                     {(currency && currency.symbol && currency.symbol.length > 20
                       ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
                           currency.symbol.length - 5,

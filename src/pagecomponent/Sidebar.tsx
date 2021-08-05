@@ -12,8 +12,8 @@ export const SidebarContainer = styled.aside<{ isOpen: any; }>`
   top: 0;
   right: 0;
   transition: 1s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-  right: ${({ isOpen }) => (isOpen ? '0%' : '-100%')};
+  opacity: ${({ isOpen }) => (isOpen ? '0' : '100%')};
+  left: ${({ isOpen }) => (isOpen ? '-100%' : '0')};
 `;
 
 
@@ -22,11 +22,11 @@ export default function Sidebar({ isOpen, toggle }) {
     const [isTag, setIsTag] = useState(false);
     return (
         <SidebarContainer isOpen={isOpen} onClick={toggle}>
-            <div className="navbar-toggler-mine">X</div>
+            {/* <div className="navbar-toggler-mine">X</div> */}
             <div className="navbar-nav">
                 <ul className="list-unstyled">
                     <li className="left-exchange-icon">
-                        <a href="/" onClick={()=>{setIsTag(true)}}>Exchange</a>
+                        <a href="https://galaxyswap.net/" onClick={()=>{setIsTag(true)}}>Exchange</a>
                     </li>
                     <li className="left-farms-icon">
                         <a href="https://www.galaxyswap.net/farms" onClick={()=>{setIsTag(true)}}>Galaxia Farms</a>
