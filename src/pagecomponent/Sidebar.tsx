@@ -14,6 +14,9 @@ export const SidebarContainer = styled.aside<{ isOpen: any; }>`
   transition: 1s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? '0' : '100%')};
   left: ${({ isOpen }) => (isOpen ? '-100%' : '0')};
+  @media(min-width : 991px) {
+      display: none;
+  }
 `;
 
 

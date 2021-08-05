@@ -438,7 +438,7 @@ a:active {
 .navbar-icon {
   display: none;
 }
-@media(max-width : 991px) {
+@media(max-width : 990px) {
   .navbar-icon {
     display: flex;
   }
@@ -467,7 +467,7 @@ a:active {
 }
 
 .fgsETM {
-  display: none !important;
+  /* display: none !important; */
 }
 
 .gYmRlc {
@@ -505,7 +505,7 @@ a:active {
     margin-bottom: 0px !important;
   }
   .gYmRlc {
-    min-height: 360px !important;
+    min-height: 340px !important;
   }
   .jrYcLq  {
     height: 30px !important;

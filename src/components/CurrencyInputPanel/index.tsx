@@ -108,11 +108,17 @@ export default function CurrencyInputPanel({
   const handleDismissSearch = useCallback(() => {
     setModalOpen(false)
   }, [setModalOpen])
+  const show_currency = (currency && currency.symbol && currency.symbol.length > 20
+    ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
+        currency.symbol.length - 5,
+        currency.symbol.length
+      )}`
+    : currency?.symbol);
   return (
     <InputPanel id={id}>
       <Container hideInput={hideInput}>
         <div className="row">
-          <div className="col-auto symbol-input" style={{ alignSelf: 'center', width: '166px' , marginLeft: '5px'}}>
+          <div className="col-auto symbol-input" style={{ alignSelf: 'center', width: '166px' , marginLeft: '8px'}}>
             <CurrencySelect
               style={{ textAlign: 'left' }}
               selected={!!currency}
@@ -146,25 +152,24 @@ export default function CurrencyInputPanel({
                 {!disableCurrencySelect && <ChevronDownIcon />}
               </Aligner>
             </CurrencySelect>
-          </div>
-
-          <div className="col-auto p-2 swap-input">
-            <div className="dark-input rounded fs-2" style={{marginRight: '10px'}}>
-              {!hideInput && (
-                <LabelRow>
+            {account && (
+                <LabelRow style={{padding: '0px'}}>
                   <RowBetween>
                     {/* <Text fontSize="14px">{translatedLabel}</Text> */}
-                    {account && (
-                      <Text onClick={onMax} fontSize="14px" style={{ display: 'inline', cursor: 'pointer' }}>
+                    {account && currency && (
+                      <Text onClick={onMax} fontSize="10px" style={{ marginLeft: '4px', marginTop: '4px', display: 'inline', cursor: 'pointer'}}>
                         {!hideBalance && !!currency && selectedCurrencyBalance
-                          ? `Balance: ${selectedCurrencyBalance?.toSignificant(6)}`
+                          ? `Balance: ${selectedCurrencyBalance?.toSignificant(6)} ${show_currency}`
                           : ' -'}
                       </Text>
                     )}
                   </RowBetween>
                 </LabelRow>
               )}
+          </div>
 
+          <div className="col-auto p-2 swap-input">
+            <div className="dark-input rounded fs-2" style={{marginRight: '10px'}}>
               <InputRow style={hideInput ? { padding: '0', borderRadius: '8px' } : {}} selected={disableCurrencySelect}>
                 {!hideInput && (
                   <>
