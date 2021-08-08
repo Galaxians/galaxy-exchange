@@ -118,11 +118,12 @@ export default function CurrencyInputPanel({
     <InputPanel id={id}>
       <Container hideInput={hideInput}>
         <div className="row">
-          <div className="col-auto symbol-input" style={{ alignSelf: 'center', width: '166px' , marginLeft: '8px'}}>
+          <div className="col-auto" style={{ alignSelf: 'center', marginLeft: '8px'}}>
             <CurrencySelect
-              style={{ textAlign: 'left' }}
+              style={{ textAlign: 'left'}}
               selected={!!currency}
-              // className="open-currency-select-button"
+              
+              className="symbol-input"
               onClick={() => {
                 if (!disableCurrencySelect) {
                   setModalOpen(true)
@@ -133,7 +134,7 @@ export default function CurrencyInputPanel({
                 {pair ? (
                   <DoubleCurrencyLogo currency0={pair.token0} currency1={pair.token1} size={16} margin />
                 ) : currency ? (
-                  <CurrencyLogo currency={currency} size="24px" style={{ marginRight: '8px' }} />
+                  <CurrencyLogo currency={currency} size="24px" style={{ marginRight: '8px', padding: '3px' }} />
                 ) : null}
                 {pair ? (
                   <Text>
@@ -146,10 +147,10 @@ export default function CurrencyInputPanel({
                           currency.symbol.length - 5,
                           currency.symbol.length
                         )}`
-                      : currency?.symbol) || TranslateString(1196, 'Select a Token')}
+                      : currency?.symbol) || <span className="response-font">{TranslateString(1196, 'Select a Token')}</span>}
                   </Text>
                 )}
-                {!disableCurrencySelect && <ChevronDownIcon />}
+                {!disableCurrencySelect && <ChevronDownIcon style={{width: '15px'}} />}
               </Aligner>
             </CurrencySelect>
             {account && (
@@ -170,7 +171,7 @@ export default function CurrencyInputPanel({
 
           <div className="col-auto p-2 swap-input">
             <div className="dark-input rounded fs-2" style={{marginRight: '10px'}}>
-              <InputRow style={hideInput ? { padding: '0', borderRadius: '8px' } : {}} selected={disableCurrencySelect}>
+              <InputRow style={hideInput ? { padding: '0px', borderRadius: '8px' } : {}} selected={disableCurrencySelect}>
                 {!hideInput && (
                   <>
                     <NumericalInput
@@ -181,7 +182,7 @@ export default function CurrencyInputPanel({
                       }}
                     />
                     {account && currency && showMaxButton && label !== 'To' && (
-                      <Button onClick={onMax} scale="sm" variant="text">
+                      <Button onClick={onMax} scale="sm" variant="text" style={{height: 'auto'}}>
                         MAX
                       </Button>
                     )}

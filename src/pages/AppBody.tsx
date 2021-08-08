@@ -13,14 +13,22 @@ export const BodyWrapper = styled(Card)`
   //box-shadow: 0px 3px 99px #ff1fff38;
 `
 
+export const Body = styled.div`
+  width: auto;
+  @media(max-width : 478px) {
+    width: 100%;
+    padding: 5px;
+  }
+`
+
 /**
  * The styled container element that wraps the content of most pages and the tabs.
  */
 
 export default function AppBody({ children }: { children: React.ReactNode }) {
   return (
-    <div>
+    <Body>
       <BodyWrapper>{children}</BodyWrapper>
-    </div>
+    </Body>
   )
 }
