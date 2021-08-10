@@ -32,7 +32,7 @@ jobs:
           echo "REACT_APP_CHAIN_NAME=${{ secrets.REACT_APP_CHAIN_NAME }}" >> .env
           cat .env
       - name: Build React App
-        run: rm -rf build && npm i && npm run build
+        run: rm -rf build && rm package-lock.json && rm yarn.lock && npm i && npm run build
       - name: Copy build folder to EC2
         uses: garygrossgarten/github-action-scp@release
         with:
