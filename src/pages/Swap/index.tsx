@@ -270,8 +270,8 @@ const Swap = () => {
            </ul>
       </div>
       <div className="rightpart col-auto"> */}
-      <div className="h1 text-white text-center mt-5">Exchange</div>
-      <div className="fs6 pink-color text-center">Trading beyond the outer rim</div>
+      <div className="text-white text-center mt-5"><Text color="white" fontSize="68px" bold>Exchange</Text></div>
+      <Text color="pink-color" className="fs6 pink-color text-center" fontSize="30px">Trading beyond the outer rim</Text>
       <br />
       <TokenWarningModal
         isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning}
@@ -301,7 +301,7 @@ const Swap = () => {
             onDismiss={handleConfirmDismiss}
           />
           
-          <CardBody>
+          <div>
             <AutoColumn gap="md">
             
               <CurrencyInputPanel
@@ -481,7 +481,7 @@ const Swap = () => {
               {showApproveFlow && <ProgressSteps steps={[approval === ApprovalState.APPROVED]} />}
               {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
             </BottomGrouping>
-          </CardBody>
+          </div>
         </Wrapper>
       </AppBody>
 
