@@ -170,7 +170,7 @@ export default function CurrencyInputPanel({
           </div>
 
           <div className="col-auto p-2 swap-input">
-            <div className="rounded fs-2" style={{marginRight: '10px', background:"rgba(97, 49, 159, 1) 0% 0% no-repeat padding-box"}}>
+            <div className="dark-input rounded fs-2" style={{marginRight: '10px'}}>
               <InputRow style={hideInput ? { padding: '0px', borderRadius: '8px' } : {}} selected={disableCurrencySelect}>
                 {!hideInput && (
                   <>

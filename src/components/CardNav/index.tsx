@@ -17,7 +17,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
   const [onPresentRecentTransactions] = useModal(<RecentTransactionsModal translateString={TranslateString} />)
   return (
     <StyledNav style={{ borderRadius: '4px' }}>
-      <div className="row mt-0" style={{justifyContent: 'space-between'}}>
+      <div className="row mt-4" style={{justifyContent: 'space-between'}}>
         <div className="col-auto" >
           <ButtonMenu activeIndex={activeIndex} scale="sm">
             {activeIndex === 0 ? (

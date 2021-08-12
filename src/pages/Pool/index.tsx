@@ -57,8 +57,8 @@ export default function Pool() {
 
   return (
     <>
-      <div className="h1 text-white text-center mt-5"><Text color="white" fontSize="68px" bold>Liquidity</Text></div>
-      <Text color="pink-color" className="fs6 pink-color text-center" fontSize="30px">Add liquidity to receive LP tokens</Text>
+      <div className="h1 text-white text-center mt-5">Liquidity</div>
+      <div className="fs6 pink-color">Add liquidity to receive LP tokens</div>
       <br />
 
       <AppBody>
@@ -67,8 +67,8 @@ export default function Pool() {
 
         </PageHeader> */}
         <Button
-          // className="pink-gredient"
-          style={{ width: '100%', borderRadius: '4px', background: "276deg, rgba(255, 31, 255, 1) 0%, rgba(151, 10, 203, 1) 100%) 0% 0% no-repeat padding-box;" }}
+          className="pink-gredient"
+          style={{ width: '92%', marginLeft: '4%', borderRadius: '4px' }}
           id="join-pool-button"
           as={Link}
           to="/add/BNB"
@@ -76,9 +76,9 @@ export default function Pool() {
           {TranslateString(168, 'Add Liquidity')}
         </Button>
         <AutoColumn justify="center">
-          <div>
+          <CardBody>
             <AutoColumn gap="12px" style={{ width: '100%' }}>
-              <RowBetween padding="12px 8px">
+              <RowBetween padding="0 8px">
                 <Text color={theme.colors.text}>{TranslateString(107, 'Your Liquidity')}</Text>
                 <Question
                   text={TranslateString(
@@ -90,10 +90,10 @@ export default function Pool() {
 
               {!account ? (
                 <LightCard
-                  style={{ width: '100%', borderRadius: '6px'}}
+                  style={{ width: '100%', borderRadius: '6px', borderColor: '#696272', background: '#696272' }}
                   padding="40px"
                 >
-                  <Text color="white" textAlign="center">
+                  <Text color="textDisabled" textAlign="center">
                     {TranslateString(156, 'Connect to a wallet to view your liquidity.')}
                   </Text>
                 </LightCard>
@@ -118,18 +118,18 @@ export default function Pool() {
               )}
 
               <div>
-                <Text fontSize="15px" style={{ padding: '.8rem 0 .8rem 0' }} className="d-flex flex-row">
+                <Text fontSize="14px" style={{ padding: '.5rem 0 .5rem 0' }}>
                   {TranslateString(106, "Don't see a pool you joined?")}{' '}
                   <StyledInternalLink id="import-pool-link" to="/find">
-                    <Text color="pink-color" className="pink-color" style={{marginLeft:12}} >{TranslateString(108, 'Import it.')}</Text>
+                    {TranslateString(108, 'Import it.')}
                   </StyledInternalLink>
                 </Text>
-                <Text fontSize="15px" style={{ padding: '.5rem 0 .5rem 0' }}>
+                <Text fontSize="14px" style={{ padding: '.5rem 0 .5rem 0' }}>
                   {TranslateString(1172, 'Or, if you staked your LP tokens in a farm, unstake them to see them here.')}
                 </Text>
               </div>
             </AutoColumn>
-          </div>
+          </CardBody>
         </AutoColumn>
       </AppBody>
     </>

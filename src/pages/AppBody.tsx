@@ -5,11 +5,10 @@ import { Card } from 'glx-uikit'
 export const BodyWrapper = styled(Card)`
   position: relative;
   // min-width: 478px;
-  // min-height: 470px;
+  min-height: 470px;
   width: 100%;
   z-index: 5;
-  padding: 18px;
-  padding-bottom: 30px;
+  padding: 5px;
   //background: #0b001e 0% 0% no-repeat padding-box;
   //box-shadow: 0px 3px 99px #ff1fff38;
 `
