@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
 <div className="footer">
-<div className="footer-bg p-5">
+<div className="footer-bg">
           <div className="row justify-content-center">
             <img src="./assets/img/galaxy-footer-logo.png" style={{width: '427px'}} alt="" />            
           </div>

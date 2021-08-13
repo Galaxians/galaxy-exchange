@@ -1,0 +1,66 @@
+import React, { useContext, useState } from 'react'
+import styled from 'styled-components';
+
+export const SidebarContainer = styled.div<{ isOpen: any; }>`
+  position: absolute;
+  z-index: 998;
+  top: 78px;
+  left: 0px;
+  width: 250px;
+  height: 100%;
+  background: rgb(52, 0, 72);
+  padding: 5px;
+  transition: 0.3s ease-in-out;
+  left: ${({ isOpen }) => (isOpen ? '-250px' : '0px')};
+  >div:last-of-type {
+      transform: ${({ isOpen }) => isOpen ? 'rotateY(180deg)' : 'rotateY(0deg)'};
+  }
+`;
+
+export default function LeftSidebar({ isOpen, toggle }) {
+
+    const btnclick = () => {
+        // console.log('haha'); 
+    }
+
+    return (
+        <SidebarContainer isOpen={isOpen} onClick={toggle}>
+            <div style={{ color: 'rgb(201, 187, 206)', height: '150px', border: '1px solid #FF00FF', borderRadius: '5px ', padding: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div style={{ color: '#FF00FF', fontSize: '22px', fontWeight: 600 }}>GLX Stats</div>
+                <div style={{ display: "flex", fontSize: '14px' }}>
+                    <div style={{ width: '120px' }}>Total GLX Supply</div>
+                    <div>100,1000,000</div>
+                </div>
+                <div style={{ display: "flex", fontSize: '14px' }}>
+                    <div style={{ width: '120px' }}>Total GLX Burned</div>
+                    <div>0</div>
+                </div>
+                <div style={{ display: "flex", fontSize: '14px' }}>
+                    <div style={{ width: '120px' }}>Total GLX/ Block</div>
+                    <div>25</div>
+                </div>
+            </div>
+
+            <div style={{ height: '120px', border: '1px solid #FF00FF', borderRadius: '5px ', padding: '15px', marginTop: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div style={{ color: '#FF00FF', fontSize: '22px', fontWeight: 600 }}>Total Value Locked</div>
+                <div style={{ color: 'white', fontSize: '22px', fontWeight: 600, fontFamily: 'cursive' }}>2648710.50</div>
+                <div style={{ color: 'rgb(201, 187, 206)', fontSize: '14px' }}>Across all LPs and Galactic Pools</div>
+            </div>
+
+            <div style={{ marginTop: '20px', height: '70px', backgroundColor: 'rgb(30, 0, 41)', color: 'rgb(201, 187, 206)', alignItems: 'center', justifyContent: 'center', display: 'flex' }}>
+                Ad Space 303 * 99
+            </div>
+
+            <div style={{ marginTop: '300px', height: '120px', padding: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div style={{ color: 'white', fontSize: '22px', display: 'flex' }}><img src="./assets/img/Galaxia-token-color-250px.png" alt="Galaxy Swap" style={{ width: "24px" }} /><div style={{ marginLeft: '12px', fontFamily: 'monospace' }}>$ 0,063</div></div>
+                <div style={{ color: 'rgb(201, 187, 206)', fontSize: '14px', display: 'flex', alignItems: 'center', marginTop: '16px' }}><img src="./assets/img/bscscan-icon.svg" alt="bscscan" style={{ width: "24px" }} /><div style={{ fontSize: '14px' }}>GALAXIA Transactions</div></div>
+                <div style={{ color: 'rgb(201, 187, 206)', fontSize: '14px', display: 'flex', alignItems: 'center' }}><img src="./assets/img/bscscan-icon.svg" alt="bscscan" style={{ width: "24px" }} /><div style={{ fontSize: '14px' }}>GALAXIA Contracts</div></div>
+                <div style={{ color: 'rgb(201, 187, 206)', fontSize: '14px', display: 'flex', alignItems: 'center' }}><img src="./assets/img/bscscan-icon.svg" alt="bscscan" style={{ width: "24px" }} /><div style={{ fontSize: '14px' }}>GALAXIA Holders</div></div>
+            </div>
+
+            <div style={{ position: 'absolute', top: 20, left: 250, width: '28px', height: '28px', cursor: 'pointer' }} onClick={() => toggle()} onKeyDown={() => btnclick()} role='button' tabIndex={0}>
+                <img src="./assets/img/left.png" alt="left" style={{ width: "28px" }} />
+            </div>
+        </SidebarContainer>
+    )
+}

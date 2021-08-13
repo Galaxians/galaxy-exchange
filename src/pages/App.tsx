@@ -29,7 +29,6 @@ const AppWrapper = styled.div`
   display: flex;
   flex-flow: column;
   align-items: flex-center;
-  overflow-x: hidden;
 `
 
 const BodyWrapper = styled.div`
@@ -51,7 +50,7 @@ const BodyWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    min-height: 90vh;
+    min-height: 71vh;
   }
 `
 const Marginer = styled.div`
@@ -129,9 +128,9 @@ export default function App() {
               <Navbar toggle={toggle} />
               {/* <div className="row"> */}
               <Sidebar isOpen={isOpen} toggle={toggle} />
-              <div className="col-auto">
+              {/* <div className="col-auto">
                 <Leftnav />
-              </div>
+              </div> */}
               <BodyWrapper>
                 <Popups />
                 <Web3ReactManager>

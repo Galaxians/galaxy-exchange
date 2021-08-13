@@ -17,7 +17,6 @@ import TradePrice from 'components/swap/TradePrice'
 import TokenWarningModal from 'components/TokenWarningModal'
 import SyrupWarningModal from 'components/SyrupWarningModal'
 import ProgressSteps from 'components/ProgressSteps'
-
 import { INITIAL_ALLOWED_SLIPPAGE } from 'constants/index'
 import { useActiveWeb3React } from 'hooks'
 import { useCurrency } from 'hooks/Tokens'
@@ -34,6 +33,8 @@ import Loader from 'components/Loader'
 import useI18n from 'hooks/useI18n'
 import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
+import LeftSidebar from 'pagecomponent/LeftSidebar'
+import RightSidebar from 'pagecomponent/RightSidebar'
 import AppBody from '../AppBody'
 
 const Swap = () => {
@@ -256,6 +257,18 @@ const Swap = () => {
     [onCurrencySelection, checkForSyrup]
   )
 
+  const [handleLeft, changeHandleLeft] = useState(false);
+  const [handleRight, changeHandleRight] = useState(false);
+
+
+  const fhandleLeft = () => {
+    changeHandleLeft(!handleLeft);
+  }
+
+  const fhandleRight = () => {
+    changeHandleRight(!handleRight);
+  }
+
   return (
     <>
     {/* <div className="row">
@@ -270,8 +283,10 @@ const Swap = () => {
            </ul>
       </div>
       <div className="rightpart col-auto"> */}
-      <div className="h1 text-white text-center mt-5">Exchange</div>
-      <div className="fs6 pink-color text-center">Trading beyond the outer rim</div>
+      <RightSidebar isOpen={!handleRight} toggle={fhandleRight}/>
+
+      <LeftSidebar isOpen={handleLeft} toggle={fhandleLeft}/>
+
       <br />
       <TokenWarningModal
         isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning}
@@ -301,7 +316,7 @@ const Swap = () => {
             onDismiss={handleConfirmDismiss}
           />
           
-          <CardBody>
+          <CardBody style={{padding: '0px'}}>
             <AutoColumn gap="md">
             
               <CurrencyInputPanel

@@ -4,8 +4,13 @@ background-size: cover;
 background-repeat: no-repeat;
 padding: 0;
 } */
+
+body {
+  overflow-x: hidden;
+}
+
 .ghost {
-  background: url(../img/podium-gswap-5.png);
+  background: url(../img/Kal-artwork-giveaway-page.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: right;
@@ -18,6 +23,7 @@ padding: 0;
   background-repeat: no-repeat;
   background-position-x: right;
   margin-left: 20px;
+  background-size: 100%;
 }
 .order-history-icon {
   background: url(../img/Order-history-icon.png);
@@ -25,6 +31,7 @@ padding: 0;
   background-repeat: no-repeat;
   background-position-x: right;
   padding: 0;
+  background-size: 100%;
 }
 
 .top-nav-bg {
@@ -54,7 +61,7 @@ padding: 0;
   opacity: 1;
 }
 .btn-social {
-  background: #ff00ff 0% 0% no-repeat padding-box;
+  /* background: #ff00ff 0% 0% no-repeat padding-box; */
   border-radius: 50%;
   opacity: 1;
   width: 42px;
@@ -133,11 +140,13 @@ padding: 0;
   color: #f1f1f1;
 }
 .dark-input {
-  background: #442b64 0% 0% no-repeat padding-box;
+  background: rgb(97,49, 159) 0% 0% no-repeat padding-box;
   height: 55px;
 }
 .pink-gredient {
-  background: transparent linear-gradient(90deg, #ff1fff 0%, #a700ff 100%) 0% 0% no-repeat padding-box;
+  /* background: transparent linear-gradient(90deg, #ff1fff 0%, #a700ff 100%) 0% 0% no-repeat padding-box; */
+  border: 1px solid #FF1FFF !important;
+  background: transparent !important;
   border-radius: 4px;
   opacity: 1;
 }
@@ -394,7 +403,7 @@ padding: 0;
 .rightpart {
   align-content: left;
 }
-a:link {
+/* a:link {
   color: #ffffff !important;
   text-transform: none;
 }
@@ -410,7 +419,7 @@ a:visited {
 a:active {
   color: #ffffff !important;
   text-transform: none;
-}
+} */
 
 .leftnav a:link {
   color: #ffffff !important;
@@ -486,6 +495,7 @@ a:active {
 .symbol-input{
   width: 120px;
   height: 32px;
+  /* background-color: rgb(85, 43, 140) !important; */
 }
 
 @media(max-width: 447px) {
@@ -513,12 +523,6 @@ a:active {
   }
   #swap-button {
     font-size: 12px !important;
-  }
-  .setting-icon {
-    background-size: 65%;
-  }
-  .order-history-icon{
-    background-size: 65%;
   }
   .dHkjAk {
     margin-bottom: 0px !important;
@@ -565,3 +569,49 @@ a:active {
 .swap-input {
   flex: 1;
 }
+
+.a-header-link {
+  margin-left: 25px;
+  border: 1px solid #FF1FFF;
+  width: 120px;
+  text-align: center;
+  border-radius: 5px;
+  color: gray;
+  position: relative;
+  /* background: transparent linear-gradient(282deg, #61319F 0%, #FF1FFF 100%) 0% 0% no-repeat padding-box; */
+  
+}
+
+.connect_btn {
+  background: rgb(156, 156, 156) !important;
+}
+
+.connect_btn:hover {
+  color: white !important;
+  background: transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box !important;
+}
+
+.token-amount-input::placeholder {
+  color: white !important;
+}
+
+.color-gray {
+  color: gray !important;
+}
+
+/* @font-face {
+  font-family: 'MoskNormal';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Mosk Normal 400.tff') format('tff');
+  }
+  body * {
+      font-family: MoskNormal !important;
+  }
+.mosk-bold-700{
+  font-family:'Mosk Bold 700';
+  font-weight:normal;
+}
+.fs-20{
+  font-size: 20px !important;
+} */

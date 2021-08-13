@@ -24,13 +24,13 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
                 className="nav-menu-item"
                 style={{
-                  paddingLeft: '25px',
-                  paddingRight: '25px',
-                  paddingTop: '25px',
-                  paddingBottom: '25px',
-                  background: '#271049',
+                  paddingLeft: '20px',
+                  paddingRight: '20px',
+                  paddingTop: '20px',
+                  paddingBottom: '20px',
+                  background: 'transparent',
                   border: '1px solid #FF00FF',
-                  borderRadius: '4px',
+                  borderRadius: '8px',
                 }}
                 id="swap-nav-link"
                 to="/swap"
@@ -40,14 +40,15 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               </ButtonMenuItem>
             ) : (
               <ButtonMenuItem
-              className="nav-menu-item"
+              className="nav-menu-item color-gray"
                 style={{
-                  paddingLeft: '25px',
-                  paddingRight: '25px',
-                  paddingTop: '25px',
-                  paddingBottom: '25px',
-                  background: '#271049',
-                  borderRadius: '4px',
+                  paddingLeft: '20px',
+                  paddingRight: '20px',
+                  paddingTop: '20px',
+                  paddingBottom: '20px',
+                  background: 'transparent',
+                  border: '1px solid rgb(30, 25, 37)',
+                  borderRadius: '8px',
                 }}
                 id="swap-nav-link"
                 to="/swap"
@@ -60,12 +61,12 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item"
                 style={{
-                  paddingLeft: '25px',
-                  paddingRight: '25px',
-                  paddingTop: '25px',
-                  paddingBottom: '25px',
-                  background: '#271049',
-                  borderRadius: '4px',
+                  paddingLeft: '20px',
+                  paddingRight: '20px',
+                  paddingTop: '20px',
+                  paddingBottom: '20px',
+                  background: 'transparent',
+                  borderRadius: '8px',
                   border: '1px solid #FF00FF',
                 }}
                 id="pool-nav-link"
@@ -76,14 +77,15 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               </ButtonMenuItem>
             ) : (
               <ButtonMenuItem
-              className="nav-menu-item"
+              className="nav-menu-item color-gray"
                 style={{
-                  paddingLeft: '25px',
-                  paddingRight: '25px',
-                  paddingTop: '25px',
-                  paddingBottom: '25px',
-                  background: '#271049',
-                  borderRadius: '4px',
+                  paddingLeft: '20px',
+                  paddingRight: '20px',
+                  paddingTop: '20px',
+                  paddingBottom: '20px',
+                  background: 'transparent',
+                  border: '1px solid rgb(30, 25, 37)',
+                  borderRadius: '8px',
                 }}
                 id="pool-nav-link"
                 to="/pool"
@@ -97,12 +99,12 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item"
                 style={{
-                  paddingLeft: '25px',
-                  paddingRight: '25px',
-                  paddingTop: '25px',
-                  paddingBottom: '25px',
-                  background: '#271049',
-                  borderRadius: '4px',
+                  paddingLeft: '20px',
+                  paddingRight: '20px',
+                  paddingTop: '20px',
+                  paddingBottom: '20px',
+                  background: 'transparent',
+                  borderRadius: '8px',
                   border: '1px solid #FF00FF',
                 }}
                 id="bridge-nav-link"
@@ -115,14 +117,15 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               </ButtonMenuItem>
             ) : (
               <ButtonMenuItem
-              className="nav-menu-item"
+              className="nav-menu-item color-gray"
                 style={{
-                  paddingLeft: '25px',
-                  paddingRight: '25px',
-                  paddingTop: '25px',
-                  paddingBottom: '25px',
-                  background: '#271049',
-                  borderRadius: '4px',
+                  paddingLeft: '20px',
+                  paddingRight: '20px',
+                  paddingTop: '20px',
+                  paddingBottom: '20px',
+                  background: 'transparent',
+                  border: '1px solid rgb(30, 25, 37)',
+                  borderRadius: '8px',
                 }}
                 id="bridge-nav-link"
                 as="a"
@@ -136,9 +139,9 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
           </ButtonMenu>
         </div>
         <div className="col-auto">
-          <ButtonMenuItem className="setting-icon" onClick={onPresentSettings} style={{ marginLeft: '-14px' }} />
+          <ButtonMenuItem className="setting-icon" onClick={onPresentSettings} style={{ marginLeft: '-14px', height: '44px', width: '44px' }} />
           <ButtonMenuItem
-            className="order-history-icon media-left"
+            className="order-history-icon media-left" style={{height: '44px', width: '44px'}}
             onClick={onPresentRecentTransactions}
           />
         </div>

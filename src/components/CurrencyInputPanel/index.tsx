@@ -171,11 +171,12 @@ export default function CurrencyInputPanel({
 
           <div className="col-auto p-2 swap-input">
             <div className="dark-input rounded fs-2" style={{marginRight: '10px'}}>
-              <InputRow style={hideInput ? { padding: '0px', borderRadius: '8px' } : {}} selected={disableCurrencySelect}>
+              <InputRow style={hideInput ? { padding: '0px', borderRadius: '8px'} : {}} selected={disableCurrencySelect}>
                 {!hideInput && (
                   <>
                     <NumericalInput
                       className="token-amount-input"
+                      style={{ height: '32px', fontSize: '20px' }}
                       value={value}
                       onUserInput={(val) => {
                         onUserInput(val)
