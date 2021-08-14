@@ -586,9 +586,13 @@ a:active {
   background: rgb(156, 156, 156) !important;
 }
 
+.liquidity_btn {
+  background: linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% !important;
+}
+
 .connect_btn:hover {
   color: white !important;
-  background: transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box !important;
+  background: linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% !important;
 }
 
 .token-amount-input::placeholder {

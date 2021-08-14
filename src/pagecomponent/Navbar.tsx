@@ -51,6 +51,8 @@ export default function Navbar({toggle}) {
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null
   const history = useHistory()
 
+  const path = history.location.pathname;
+
   return (
     <div className="container-fluid top-nav-bg">
       <nav className="navbar navbar-dark navbar-expand-lg">
@@ -100,22 +102,38 @@ export default function Navbar({toggle}) {
           {/* <span className="pink-color small mt-2">Powered by GalaxyProtocol</span> */}
             <ul className="navbar-nav" style={{flex:1, justifyContent:'center'}}>
               <li className="nav-item" style={{display:'inline-flex'}}>
-              <StyledLink href="#" target='_blank' rel="noreferrer" style={{background: 'transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box'}}>
-                  <span>Exchange</span>
-                 {/* <div style={{position:'absolute',top:0,left:0,height:'100%', borderRadius: '10px'}} /> */}
-                </StyledLink>
+                {path !== '/swap' ?               
                 <StyledLink href="#" target='_blank' rel="noreferrer">
+                  <span>Exchange</span>
+                 <div style={{position:'absolute',top:0,left:0,height:'100%', borderRadius: '10px'}} />
+                </StyledLink> :               
+                <StyledLink href="#" target='_blank' rel="noreferrer" style={{background: 'transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box'}}>
+                  <span>Exchange</span>
+                </StyledLink>}
+                {path !== '/farms' ?               
+                <StyledLink href="#/farms" target='_blank' rel="noreferrer">
                   <span>FARMS</span>
                  <div style={{position:'absolute',top:0,left:0,height:'100%', borderRadius: '10px'}} />
-                </StyledLink>
-                <StyledLink href="#" target='_blank' rel="noreferrer">
+                </StyledLink> :               
+                <StyledLink href="#/famrs" target='_blank' rel="noreferrer" style={{background: 'transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box'}}>
+                  <span>FARMS</span>
+                </StyledLink>}
+                {path !== '/pool' ?               
+                <StyledLink href="#/pool" target='_blank' rel="noreferrer">
                   <span>POOL</span>
                  <div style={{position:'absolute',top:0,left:0,height:'100%', borderRadius: '10px'}} />
-                </StyledLink>
-                <StyledLink href="#" target='_blank' rel="noreferrer">
-                  <span>LANCHPAD</span>
+                </StyledLink> :               
+                <StyledLink href="#/pool" target='_blank' rel="noreferrer" style={{background: 'transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box'}}>
+                  <span>POOL</span>
+                </StyledLink>}
+                {path !== '/launchpad' ?               
+                <StyledLink href="#/launchpad" target='_blank' rel="noreferrer">
+                  <span>LAUNCHPAD</span>
                  <div style={{position:'absolute',top:0,left:0,height:'100%', borderRadius: '10px'}} />
-                </StyledLink>
+                </StyledLink> :               
+                <StyledLink href="#/launchpad" target='_blank' rel="noreferrer" style={{background: 'transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box'}}>
+                  <span>LAUNCHPAD</span>
+                </StyledLink>}
               </li>
             </ul>
             <span className="navbar-text actions ms-auto">
