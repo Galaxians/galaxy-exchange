@@ -12,10 +12,14 @@ export const BuyerCard = styled(Card)`
   background: transparent linear-gradient(317deg, #440C8B 0%, #FF00FF 100%) 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 46px #FF00FF45;
   border: 1px solid #FF1FFF;
+  border-radius: 5px;
   opacity: 1;
   text-align: center;
   margin: 10px;
   cursor: pointer;
+  &:hover {
+    background: transparent linear-gradient(317deg, #FF00FF 0%, #440C8B 100%) 0% 0% no-repeat padding-box;
+  }
 `
 
 export const DeveloperCard = styled(Card)`
@@ -28,10 +32,14 @@ export const DeveloperCard = styled(Card)`
   background: transparent linear-gradient(137deg, #440C8B 0%, #0B001E 100%) 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 46px #FF00FF45;
   border: 1px solid #440C8B;
+  border-radius: 5px;
   opacity: 1;
   text-align: center;
   margin: 10px;
   cursor: pointer;
+  &:hover {
+    background: transparent linear-gradient(319deg, #440C8B 0%, #0B001E 100%) 0% 0% no-repeat padding-box;
+  }
 `
 
 export default function LaunchPad() {
