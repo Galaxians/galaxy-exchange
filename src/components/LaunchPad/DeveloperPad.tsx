@@ -87,11 +87,23 @@ export const CheckBtn = styled.div`
     margin-left: 50px;
 `
 
+export const SimpleInput = styled.input`
+    background: unset;
+    border: unset;
+    outline: unset;
+    color: white;
+`
+
 export default function DeveloperPad({
     GoBack,
 }: { GoBack: () => void }) {
 
     const [activeIndex, setIndex] = useState(0);
+    const [tokenAddress, setToken] = useState('');
+
+    const onChange = event => {
+        setToken(event.target.value);
+    }
 
     return (<DeveloperDiv>
 
@@ -172,11 +184,11 @@ export default function DeveloperPad({
                     <ChevronDownIcon style={{fill: '#FF1FFF'}}/>
                 </div>
                 <div style={{ display: 'flex', marginTop: '20px', justifyContent: 'space-between', border: '1px solid #FF1FFF', padding: '10px', width: '400px', alignSelf: 'center', borderRadius: '20px' }}>
-                    <div style={{ display: 'flex' }}>
-                        <div style={{ marginRight: '10px', borderRadius: '100%', background: 'white', width: '24px' }} />
-                        <Text>Enter your token address</Text>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <div style={{ marginRight: '10px', borderRadius: '100%', background: 'white', width: '25px', height: '25px' }} />
+                        <SimpleInput style={{width: '300px'}} onChange={onChange} value={tokenAddress} placeholder="Enter your token address"/>
                     </div>
-                    <SearchIcon />
+                    <SearchIcon style={{zoom: 1.5}}/>
                 </div>
             </div></MainDiv></div> : null}
         {activeIndex === 3 ? <div style={{ display: 'flex', justifyContent: 'center' }}><MainDiv style={{ width: '700px' }}>
@@ -189,10 +201,25 @@ export default function DeveloperPad({
                 <div style={{ display: 'flex', marginTop: '5px', justifyContent: 'space-between', border: '1px solid #FF1FFF', padding: '5px', width: '100%', alignSelf: 'center', borderRadius: '8px' }}>
                     <div style={{ display: 'flex' }}>
                         <div style={{ marginRight: '10px', borderRadius: '100%', background: 'white', width: '24px' }} />
-                        <Text>Enter your token address</Text>
+                        <SimpleInput style={{width: '450px'}} onChange={onChange} value={tokenAddress} placeholder="Enter your token address"/>
                     </div>
                 </div>
-                <Text style={{ fontSize: '12px', marginTop: '5px' }}>e.g. 0xc70bb2736e218861dca818d1e9f7a1930fe61e5b</Text>
+                {tokenAddress === '' ? <Text style={{ fontSize: '12px', marginTop: '5px' }}>e.g. 0xc70bb2736e218861dca818d1e9f7a1930fe61e5b</Text> : <>
+                <div style={{display: 'flex', flexDirection: 'column', marginTop: '10px', border: '0.5 solid #FF1FFF', borderRadius: '8px', background: '#760FA0 0% 0% no-repeat padding-box', padding: '10px', color: 'white'}}>
+                    <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                        <div style={{display: 'flex', alignItems: 'center'}}>
+                            <div style={{ marginLeft: '5px', marginRight: '5px', borderRadius: '100%', background: 'white', width: '24px', height: '24px' }} />
+                            <Text style={{ fontSize: '14px'}}>SAFEGALAXY / SafeGalaxy</Text>
+                        </div>
+                        <div style={{fontSize: '12px'}}>9 Decimals</div>
+                    </div>
+                    <div style={{display: 'flex', marginTop: '15px', fontSize: '12px', justifyContent: 'center'}}>
+                        Your balance
+                    </div>
+                    <Text style={{marginTop: '5px', alignSelf: 'center'}}>0 SAFEGALAXY</Text>
+                </div>
+                <Text style={{marginTop: '10px'}}>0 SAFEGALAXY</Text>
+                </> }
             </div></MainDiv></div> : null}
     </DeveloperDiv>
     )
