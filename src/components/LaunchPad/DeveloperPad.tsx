@@ -96,9 +96,9 @@ export default function DeveloperPad({
     return (<DeveloperDiv>
 
         {activeIndex === 0 ? <BackDiv onClick={() => GoBack()}>
-            <ChevronLeftIcon /> Go Back
+            <ChevronLeftIcon style={{fill: '#FF1FFF'}}/> Go Back
         </BackDiv> : <BackDiv onClick={() => setIndex(0)}>
-            <ChevronLeftIcon /> Go Back
+            <ChevronLeftIcon style={{fill: '#FF1FFF'}}/> Go Back
         </BackDiv>}
         <div style={{ color: 'white', fontSize: '64px', textAlign: 'center', marginTop: '50px' }}>
             Nebula Launchpad
@@ -140,7 +140,7 @@ export default function DeveloperPad({
             <div style={{ height: '100px', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '20px' }}>
                 Nebula Lanunchpad
             </div>
-            <div style={{ display: 'flex', padding: '50px', background: 'rgb(66, 16, 136)', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', padding: '50px', flexDirection: 'column', background: 'transparent linear-gradient(342deg, #1D0041 0%, #440C8B 100%) 0% 0% no-repeat padding-box' }}>
                 <PresaleDiv>
                     Create your presale
                 </PresaleDiv>
@@ -153,7 +153,7 @@ export default function DeveloperPad({
                         <Text>Buyers participate with</Text>
                         <div style={{ marginLeft: '50px', marginRight: '10px', borderRadius: '100%', background: 'white', width: '24px' }} />
                         <Text>WBNB</Text>
-                        <ChevronDownIcon />
+                        <ChevronDownIcon style={{fill: '#FF1FFF'}}/>
                     </div>
                     <Text style={{ marginTop: '20px', fontSize: '12px' }}>GalaxySwap V2 par to created</Text>
                     <Text style={{ fontSize: '12px', color: '#FF1FFF' }}>WBNB/?</Text>
@@ -163,13 +163,13 @@ export default function DeveloperPad({
             <div style={{ height: '100px', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '20px' }}>
                 High Security Token Locker
             </div>
-            <div style={{ display: 'flex', padding: '50px 100px', background: 'rgb(66, 16, 136)', flexDirection: 'column', textAlign: 'center' }}>
+            <div style={{ display: 'flex', padding: '50px 100px', background: 'transparent linear-gradient(342deg, #1D0041 0%, #440C8B 100%) 0% 0% no-repeat padding-box', flexDirection: 'column', textAlign: 'center' }}>
                 <Text style={{ fontSize: '12px' }}>We bring you the High Security Token Locker. Token locks are represented as shares of a pool, in a similar way to a GalaxySwap pool, allowing all BEP20 tokens including Rebasing and Deflationary mechanisms to be supported. This means lock amounts may change due to decimal rounding, but you will always retain your share of the pool.</Text>
                 <Text style={{ fontSize: '14px', marginTop: '25px' }}>Selected Network</Text>
                 <div style={{ display: 'flex', marginTop: '20px', justifyContent: 'center', border: '1px solid #FF1FFF', padding: '5px', width: '350px', alignSelf: 'center', borderRadius: '8px' }}>
                     <div style={{ marginRight: '10px', borderRadius: '100%', background: 'white', width: '24px' }} />
                     <Text>Binance Smart Chain</Text>
-                    <ChevronDownIcon />
+                    <ChevronDownIcon style={{fill: '#FF1FFF'}}/>
                 </div>
                 <div style={{ display: 'flex', marginTop: '20px', justifyContent: 'space-between', border: '1px solid #FF1FFF', padding: '10px', width: '400px', alignSelf: 'center', borderRadius: '20px' }}>
                     <div style={{ display: 'flex' }}>
@@ -183,7 +183,7 @@ export default function DeveloperPad({
             <div style={{ height: '100px', color: 'white', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '20px' }}>
                 Intergalactic Liquidity Locker
             </div>
-            <div style={{ display: 'flex', padding: '100px 100px', background: 'rgb(66, 16, 136)', flexDirection: 'column', textAlign: 'left' }}>
+            <div style={{ display: 'flex', padding: '100px 100px', background: 'transparent linear-gradient(342deg, #1D0041 0%, #440C8B 100%) 0% 0% no-repeat padding-box', flexDirection: 'column', textAlign: 'left' }}>
                 <Text style={{ fontSize: '12px' }}>The intergalactic Liquidity Locker does say his name. It locks your tokens. That way you will gain trust amongst your investors. If you are not developing a token this section is not ment for you. Instead we kindly direct you to this</Text>
                 <Text style={{ fontSize: '14px', marginTop: '50px' }}>Enter the GalaxySwap V1 pair address you would like to lock liquidity for</Text>
                 <div style={{ display: 'flex', marginTop: '5px', justifyContent: 'space-between', border: '1px solid #FF1FFF', padding: '5px', width: '100%', alignSelf: 'center', borderRadius: '8px' }}>

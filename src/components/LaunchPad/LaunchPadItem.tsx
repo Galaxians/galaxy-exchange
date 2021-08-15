@@ -202,7 +202,7 @@ export default function LaunchPadItem({ stateIndex, changeDetail }: { stateIndex
                 </div>
             </ContentCard>
             <DetailCard onClick={() => handleOpen()}>
-                Detail <ChevronRightIcon />
+                Detail <ChevronRightIcon style={{fill: '#FF1FFF'}}/>
             </DetailCard>
         </div>
         <Modal

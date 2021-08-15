@@ -107,7 +107,7 @@ export default function LaunchPad() {
         </DeveloperCard>
       </div> : null}
       {activeIndex === 1 ? <><GobackCard>
-        <Card style={{ padding: '20px', cursor: 'pointer' }} onClick={() => GoBack()}><ChevronLeftIcon />Go back</Card>
+        <Card style={{ padding: '20px', cursor: 'pointer' }} onClick={() => GoBack()}><ChevronLeftIcon style={{fill: '#FF1FFF'}}/>Go back</Card>
         <div style={{ display: 'flex', padding: '20px' }}>
           <div style={{ marginRight: '20px' }}>
             <div style={{ fontSize: '12px', padding: '5px 0px' }}>Wallet</div>
@@ -116,7 +116,7 @@ export default function LaunchPad() {
           <div style={{ marginRight: '20px' }}>
             <div style={{ fontSize: '12px', padding: '5px 0px' }}>NetWork</div>
             <div style={{ width: '200px', padding: '5px 10px', border: '1px solid #27262C', borderRadius: '4px', display: 'flex', justifyContent: 'space-between' }}>
-              <div>BSC Network</div> <ChevronDownIcon />
+              <div>BSC Network</div> <ChevronDownIcon style={{fill: '#FF1FFF'}}/>
             </div>
           </div>
           <div style={{ marginRight: '20px' }}>
