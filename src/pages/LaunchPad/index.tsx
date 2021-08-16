@@ -5,6 +5,7 @@ import Question from 'components/QuestionHelper'
 import LaunchPadItem from 'components/LaunchPad/LaunchPadItem'
 import LaunchPadDetail from 'components/LaunchPad/LaunchPadDetail'
 import DeveloperPad from 'components/LaunchPad/DeveloperPad'
+import { unstable_batchedUpdates } from 'react-dom'
 
 export const BuyerCard = styled(Card)`
   position: relative;
@@ -49,7 +50,6 @@ export const DeveloperCard = styled(Card)`
 export const GobackCard = styled(Card)`
   margin-top: 25px;
   width: 900px;
-  height: 200px;
   background: #0B001E 0% 0% no-repeat padding-box;
   border: 1px solid #FF1FFF;
   border-radius: 11px;
@@ -124,7 +124,7 @@ export default function LaunchPad() {
             <div style={{ width: '200px', padding: '5px 10px', border: '1px solid #27262C', borderRadius: '4px' }}>10.5454 BNB</div>
           </div>
         </div>
-        <div style={{ padding: '20px', display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{ padding: '10px', display: 'flex', justifyContent: 'space-between' }}>
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <StateDiv active={stateIndex === 0} onClick={() => chagneState(0)}>
               <div style={{ background: 'red', borderRadius: '100%', width: '10px', height: '10px', marginRight: '10px' }} />
@@ -145,9 +145,9 @@ export default function LaunchPad() {
 
           </div>
           <div>
-            <div style={{ marginRight: '10px', display: 'flex', justifyContent: 'space-between', borderRadius: '8px', border: '1px solid #27262C', width: '300px', padding: '5px 15px', alignItems: 'center' }}>
-              <div style={{ fontSize: '12px' }}>Put token address here</div>
-              <SearchIcon />
+            <div style={{ display: 'flex', justifyContent: 'space-between', borderRadius: '8px', border: '1px solid #27262C', width: '300px', padding: '5px 15px', alignItems: 'center' }}>
+              <div style={{ fontSize: '12px' }}><input placeholder="Put token address here" style={{background: 'unset', outline: 'unset', border: 'unset', color: 'white', width: '250px', height: '30px', fontSize: '14px'}}/></div>
+              <SearchIcon style={{cursor: 'pointer'}}/>
             </div>
           </div>
         </div>
