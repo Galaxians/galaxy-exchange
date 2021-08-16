@@ -116,7 +116,7 @@ export default function CurrencyInputPanel({
       )}`
     : currency?.symbol);
 
-    console.log(!!currency)
+    // console.log(!!currency)
   
   return (
     <InputPanel id={id}>
