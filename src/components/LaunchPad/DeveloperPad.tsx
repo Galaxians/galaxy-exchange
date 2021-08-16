@@ -399,10 +399,10 @@ export default function DeveloperPad({
                         </div>
                         <div style={{ marginTop: '50px', fontSize: '14px' }}>Do you have a valid referral address?</div>
                         <div style={{ display: 'flex', marginTop: '5px' }}>
-                            <div style={{ marginRight: '10px', width: '70px', height: '30px', borderRadius: '8px', background: '#1AC988', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <div style={{ cursor: 'pointer',  marginRight: '10px', width: '70px', height: '30px', borderRadius: '8px', background: '#1AC988', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 No
                             </div>
-                            <div style={{ width: '70px', height: '30px', borderRadius: '8px', background: 'unset', border: '1px solid #FF1FFF', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <div style={{ cursor: 'pointer',  width: '70px', height: '30px', borderRadius: '8px', background: 'unset', border: '1px solid #FF1FFF', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 Yes
                             </div>
                         </div>
@@ -425,10 +425,10 @@ export default function DeveloperPad({
                             <div style={{ flex: 1 }} />
                         </div>
                         <div style={{ display: 'flex', marginTop: '40px' }}>
-                            <div style={{ marginRight: '10px', width: '200px', height: '30px', borderRadius: '8px', background: '#1AC988', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <div style={{ cursor: 'pointer',  marginRight: '10px', width: '200px', height: '30px', borderRadius: '8px', background: '#1AC988', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 Approve
                             </div>
-                            <div style={{ width: '200px', height: '30px', borderRadius: '8px', background: 'unset', border: '1px solid #FF1FFF', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                            <div style={{ cursor: 'pointer', width: '200px', height: '30px', borderRadius: '8px', background: 'unset', border: '1px solid #FF1FFF', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                 Create presale
                             </div>
                         </div>
