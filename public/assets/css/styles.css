@@ -484,7 +484,7 @@ a:active {
   min-height: 400px !important;
 }
 
-.media-left {
+.media-padding {
   margin-left:4px;
 }
 
@@ -499,6 +499,16 @@ a:active {
 }
 
 @media(max-width: 447px) {
+  .setting-icon{
+    background-size: 65%;
+    padding: 24px !important;
+    margin-left: -30px !important;
+  }
+  .order-history-icon {
+    background-size: 65%;
+    padding: 24px !important;
+    margin-left: -10px !important;
+  }
   .response-font {
     font-size: 8px;
   }
@@ -537,8 +547,9 @@ a:active {
     width: 100px !important;
     height: 24px !important;
   }
-  .media-left {
-    margin-left: 0px;
+  .media-padding {
+    padding: 0px !important;
+    padding-right: 15px !important;
   }
   .gDZAjF {
     height: auto !important;
@@ -548,7 +559,7 @@ a:active {
   }
 }
 
-@media(max-width: 374px) {
+@media(max-width: 375px) {
   #swap-nav-link {
     width: 70px;
   }
@@ -563,6 +574,9 @@ a:active {
   .navbar-brand {
     margin-right: 0px;
     margin-left: -40px;
+  }
+  .media-padding {
+    padding: 0px !important;
   }
 }
 

@@ -138,10 +138,10 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
             )}
           </ButtonMenu>
         </div>
-        <div className="col-auto">
-          <ButtonMenuItem className="setting-icon" onClick={onPresentSettings} style={{ marginLeft: '-14px', height: '44px', width: '44px' }} />
+        <div className="col-auto media-padding">
+          <ButtonMenuItem className="setting-icon" style={{marginRight: '2px'}} onClick={onPresentSettings}  />
           <ButtonMenuItem
-            className="order-history-icon media-left" style={{height: '44px', width: '44px'}}
+            className="order-history-icon" 
             onClick={onPresentRecentTransactions}
           />
         </div>

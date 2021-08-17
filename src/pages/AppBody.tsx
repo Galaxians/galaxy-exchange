@@ -18,8 +18,8 @@ export const Body = styled.div`
   border: 1px solid #FF1FFF;
   border-radius: 5px;
   @media(max-width : 478px) {
-    width: 100%;
-    padding: 5px;
+    width: 99%;
+    // padding: 5px;
   }
 `
 
