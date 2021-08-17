@@ -136,7 +136,7 @@ export default function LaunchPad() {
           <div style={{ fontSize: '32px', fontWeight: 500 }}>Developers</div>
           <div>Do you want launch your own Token? Click here</div>
         </DeveloperCard>
-      </div> : <div style={{ display: "flex", flexDirection: "column", paddingTop: '150px' }}>
+      </div> : <div style={{ display: "flex", flexDirection: "column", marginTop: '150px', marginBottom: '300px' }}>
         <BuyerCard style={{height: '90px', paddingTop: '25px', justifyContent: 'center', alignItems: 'center'}} onClick={() => changeIndex(1)}>
           <div style={{ fontSize: '32px', fontWeight: 500 }}>Buyers</div>
         </BuyerCard>

@@ -26,7 +26,8 @@ export const StyledLink = styled.a`
     z-index: 1;
   }
   >div {
-    transition: 1s;
+    transition: 0.3s;
+    background: transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box;
     width: 0%;
   }
   &:hover {
