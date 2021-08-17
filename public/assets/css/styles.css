@@ -448,12 +448,15 @@ a:active {
 .navbar-icon {
   display: none;
 }
+@media(max-width: 1150px) {
+  .navbar-brand {
+    display: none;
+  }
+  
+}
 @media(max-width : 990px) {
   .navbar-icon {
     display: flex;
-  }
-  .navbar-brand {
-    display: none;
   }
   .navbar-nav {
     margin-top: 100px;

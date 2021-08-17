@@ -63,7 +63,7 @@ export default function Navbar({toggle}) {
             <span className="navbar-toggler-icon text-white" />
           </button>
           <a className="navbar-brand" href="https://galaxyswap.net/">
-            <img src="./assets/img/galaxyswap-logo-color-800px.png" alt="Galaxy Swap" style={{width: "180px", marginLeft:'30px'}} />
+            <img src="./assets/img/galaxyswap-logo-color-800px.png" alt="Galaxy Swap" style={{width: "180px", marginLeft:'5px'}} />
           </a>
           <a className="navbar-icon" href="https://galaxyswap.net/">
             <img src="./assets/img/Icon-galaxyswap-192x192.png" alt="Galaxy Swap" style={{marginLeft: '5px', width: "50px"}} />
