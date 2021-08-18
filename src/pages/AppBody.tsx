@@ -21,6 +21,7 @@ export const Body = styled.div`
   width: auto;
   border: 1px solid #FF1FFF;
   border-radius: 5px;
+  margin-top: 50px;
   @media(max-width : 478px) {
     width: 99%;
     // padding: 5px;
