@@ -9,6 +9,9 @@ import RecentTransactionsModal from '../PageHeader/RecentTransactionsModal'
 
 const StyledNav = styled.div`
   margin-bottom: 20px;
+  @media(max-width: 478px) {
+    margin-bottom :0px;
+  }
 `
 
 function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
@@ -24,10 +27,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
                 className="nav-menu-item"
                 style={{
-                  paddingLeft: '20px',
-                  paddingRight: '20px',
-                  paddingTop: '20px',
-                  paddingBottom: '20px',
+                  
                   background: 'transparent',
                   border: '1px solid #FF00FF',
                   borderRadius: '8px',
@@ -42,10 +42,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item color-gray"
                 style={{
-                  paddingLeft: '20px',
-                  paddingRight: '20px',
-                  paddingTop: '20px',
-                  paddingBottom: '20px',
+
                   background: 'transparent',
                   border: '1px solid rgb(30, 25, 37)',
                   borderRadius: '8px',
@@ -61,10 +58,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item"
                 style={{
-                  paddingLeft: '20px',
-                  paddingRight: '20px',
-                  paddingTop: '20px',
-                  paddingBottom: '20px',
+
                   background: 'transparent',
                   borderRadius: '8px',
                   border: '1px solid #FF00FF',
@@ -79,10 +73,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item color-gray"
                 style={{
-                  paddingLeft: '20px',
-                  paddingRight: '20px',
-                  paddingTop: '20px',
-                  paddingBottom: '20px',
+
                   background: 'transparent',
                   border: '1px solid rgb(30, 25, 37)',
                   borderRadius: '8px',
@@ -99,10 +90,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item"
                 style={{
-                  paddingLeft: '20px',
-                  paddingRight: '20px',
-                  paddingTop: '20px',
-                  paddingBottom: '20px',
+
                   background: 'transparent',
                   borderRadius: '8px',
                   border: '1px solid #FF00FF',
@@ -119,10 +107,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item color-gray"
                 style={{
-                  paddingLeft: '20px',
-                  paddingRight: '20px',
-                  paddingTop: '20px',
-                  paddingBottom: '20px',
+
                   background: 'transparent',
                   border: '1px solid rgb(30, 25, 37)',
                   borderRadius: '8px',
@@ -138,10 +123,10 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
             )}
           </ButtonMenu>
         </div>
-        <div className="col-auto">
-          <ButtonMenuItem className="setting-icon" onClick={onPresentSettings} style={{ marginLeft: '-14px', height: '44px', width: '44px' }} />
+        <div className="col-auto media-padding">
+          <ButtonMenuItem className="setting-icon" style={{marginRight: '2px'}} onClick={onPresentSettings}  />
           <ButtonMenuItem
-            className="order-history-icon media-left" style={{height: '44px', width: '44px'}}
+            className="order-history-icon" 
             onClick={onPresentRecentTransactions}
           />
         </div>

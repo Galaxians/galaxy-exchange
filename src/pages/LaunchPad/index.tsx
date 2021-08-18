@@ -1,4 +1,4 @@
-import React, { useContext, useMemo, useState } from 'react'
+import React, { useContext, useMemo, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Card, Button, ChevronDownIcon, SearchIcon, Text, ChevronLeftIcon, ChevronRightIcon } from 'glx-uikit'
 import Question from 'components/QuestionHelper'
@@ -6,6 +6,28 @@ import LaunchPadItem from 'components/LaunchPad/LaunchPadItem'
 import LaunchPadDetail from 'components/LaunchPad/LaunchPadDetail'
 import DeveloperPad from 'components/LaunchPad/DeveloperPad'
 import { unstable_batchedUpdates } from 'react-dom'
+
+const getWindowDimensions = () => {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+      width,
+      height,
+  };
+}
+const useWindowDimensions = () => {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+      function handleResize() {
+          setWindowDimensions(getWindowDimensions());
+      }
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 export const BuyerCard = styled(Card)`
   position: relative;
@@ -94,9 +116,18 @@ export default function LaunchPad() {
     showOpenDetail(true);
   }
 
+  const screenWidth = useWindowDimensions().width;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if(screenWidth > 650) setIsMobile(false)
+    else setIsMobile(true)
+    // screenWidth > 950 ? setIsMobile(false) : setIsMobile(true)
+}, [screenWidth]);
+
   return (
     <>
-      {activeIndex === 0 ? <div style={{ display: "flex" }}>
+      {activeIndex === 0 ? (!isMobile ? <div style={{ display: "flex" }}>
         <BuyerCard onClick={() => changeIndex(1)}>
           <div style={{ fontSize: '32px', fontWeight: 500 }}>Buyers</div>
           <div>Are you looking to buy brand new tokens in Pre-sale ? Click here</div>
@@ -105,7 +136,14 @@ export default function LaunchPad() {
           <div style={{ fontSize: '32px', fontWeight: 500 }}>Developers</div>
           <div>Do you want launch your own Token? Click here</div>
         </DeveloperCard>
-      </div> : null}
+      </div> : <div style={{ display: "flex", flexDirection: "column", marginTop: '150px', marginBottom: '300px' }}>
+        <BuyerCard style={{height: '90px', paddingTop: '25px', justifyContent: 'center', alignItems: 'center'}} onClick={() => changeIndex(1)}>
+          <div style={{ fontSize: '32px', fontWeight: 500 }}>Buyers</div>
+        </BuyerCard>
+        <DeveloperCard style={{height: '90px', paddingTop: '25px', justifyContent: 'center', alignItems: 'center'}} onClick={() => changeIndex(2)}>
+          <div style={{ fontSize: '32px', fontWeight: 500 }}>Developers</div>
+        </DeveloperCard>
+      </div>) : null}
       {activeIndex === 1 ? <><GobackCard>
         <Card style={{ padding: '20px', cursor: 'pointer' }} onClick={() => GoBack()}><ChevronLeftIcon style={{fill: '#FF1FFF'}}/>Go back</Card>
         <div style={{ display: 'flex', padding: '20px' }}>

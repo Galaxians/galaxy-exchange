@@ -15,6 +15,9 @@ export const SidebarContainer = styled.div<{ isOpen: any; }>`
     >div:last-of-type {
         transform: ${({ isOpen }) => isOpen ? 'rotateY(0deg)' : 'rotateY(180deg)'};
     }
+    @media (max-width: 991px) {
+        display: none;
+    }
 `;
 
 

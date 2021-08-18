@@ -16,7 +16,7 @@ const InputRow = styled.div<{ selected: boolean }>`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: ${({ selected }) => (selected ? '0.75rem 0.5rem 0.75rem 1rem' : '0.75rem 0.75rem 0.75rem 1rem')};
+  padding: ${({ selected }) => (selected ? '0.5rem 1rem' : '0.5rem 1rem')};
 `
 const CurrencySelect = styled.button<{ selected: boolean }>`
   align-items: center;
@@ -120,7 +120,7 @@ export default function CurrencyInputPanel({
     <InputPanel id={id}>
       <Container hideInput={hideInput}>
         <div className="row">
-          <div className="col-auto" style={{ alignSelf: 'center', marginLeft: '8px'}}>
+          <div className="col-auto" style={{ alignSelf: 'center', marginLeft: '8px', paddingTop: '0.3rem'}}>
             <CurrencySelect
               style={{ textAlign: 'left'}}
               selected={!!currency}

@@ -11,15 +11,20 @@ export const BodyWrapper = styled(Card)`
   padding: 29px;
   //background: #0b001e 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 99px #ff1fff38;
+  @media(max-width: 478px) {
+    padding: 0px 25px 25px 25px;
+    min-height: unset;
+  }
 `
 
 export const Body = styled.div`
   width: auto;
   border: 1px solid #FF1FFF;
   border-radius: 5px;
+  margin-top: 50px;
   @media(max-width : 478px) {
-    width: 100%;
-    padding: 5px;
+    width: 99%;
+    // padding: 5px;
   }
 `
 

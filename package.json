@@ -7,7 +7,7 @@
     "@binance-chain/bsc-connector": "^1.0.0",
     "@crowdin/crowdin-api-client": "^1.8.16",
     "@ethersproject/experimental": "^5.0.1",
-    "@material-ui/core": "^4.12.1",
+    "@material-ui/core": "^4.12.3",
     "@pancakeswap-libs/pancake-swap-core": "^0.1.0",
     "@pancakeswap-libs/sdk": "1.0.1",
     "@popperjs/core": "^2.4.4",
@@ -89,7 +89,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "postinstall": "rm -rf ./node_modules/@pancakeswap-libs/sdk; cp -r ./dist  ./node_modules/@pancakeswap-libs/sdk",
     "integration-test": "start-server-and-test 'serve build -l 3000' http://localhost:3000 'cypress run'"
