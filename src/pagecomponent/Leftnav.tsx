@@ -3,6 +3,7 @@ import { Button, useWalletModal as UikitMenu } from 'glx-uikit'
 import { useHistory } from 'react-router-dom'
 import { useWeb3React } from '@web3-react/core'
 import useAuth from 'hooks/useAuth'
+import { BASE_GALAXY_SWAP_URL } from 'config'
 
 export default function Leftnav() {
   const history = useHistory()
@@ -41,10 +42,10 @@ export default function Leftnav() {
                 <a href="/">Exchange</a>
               </li>
               <li className="left-farms-icon">
-                <a href="https://www.galaxyswap.net/farms">Galaxia Farms</a>
+                <a href={`${BASE_GALAXY_SWAP_URL}/farms`}>Galaxia Farms</a>
               </li>
               <li className="left-pool-icon">
-                <a href="https://www.galaxyswap.net/pools">Galaxia Pool</a>
+                <a href={`${BASE_GALAXY_SWAP_URL}/pools`}>Galaxia Pool</a>
               </li>
               <li className="left-redeem-icon">
                 <a href="https://galaxyprotocol.io/#/buyback">Galaxia Redeem</a>

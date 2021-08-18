@@ -1,0 +1,2 @@
+export const BASE_GALAXY_SWAP_URL = process.env.REACT_APP_GALAXY_SWAP_URL
+export default BASE_GALAXY_SWAP_URL
