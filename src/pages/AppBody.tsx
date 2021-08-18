@@ -11,6 +11,10 @@ export const BodyWrapper = styled(Card)`
   padding: 29px;
   //background: #0b001e 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 99px #ff1fff38;
+  @media(max-width: 478px) {
+    padding: 0px 25px 25px 25px;
+    min-height: unset;
+  }
 `
 
 export const Body = styled.div`

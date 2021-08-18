@@ -141,7 +141,7 @@ body {
 }
 .dark-input {
   background: rgb(97,49, 159) 0% 0% no-repeat padding-box;
-  height: 55px;
+  /* height: 55px; */
 }
 .pink-gredient {
   /* background: transparent linear-gradient(90deg, #ff1fff 0%, #a700ff 100%) 0% 0% no-repeat padding-box; */
@@ -501,11 +501,59 @@ a:active {
   /* background-color: rgb(85, 43, 140) !important; */
 }
 
+#swap-nav-link {
+  padding: 24px;
+  width: 130px;
+}
+#pool-nav-link {
+  padding: 24px;
+  width:130px;
+} 
+#bridge-nav-link {
+  padding: 24px;
+  width: 130px;
+}
+
+@media(max-width: 600px) {
+  #swap-nav-link {
+    padding: 24px;
+    width: 100px;
+  }
+  #pool-nav-link {
+    padding: 24px;
+    width:100px;
+  } 
+  #bridge-nav-link {
+    padding: 24px;
+    width: 100px;
+  }
+}
+
+@media(max-width: 510px) {
+  #swap-nav-link {
+    padding: 24px;
+    width: 90px;
+  }
+  #pool-nav-link {
+    padding: 24px;
+    width:75px;
+  } 
+  #bridge-nav-link {
+    padding: 24px;
+    width: 75px;
+  }
+}
+
 @media(max-width: 447px) {
+
+  .connect_btn {
+    height: 32px !important;
+  }
   .setting-icon{
     background-size: 65%;
     padding: 24px !important;
     margin-left: -30px !important;
+    margin-right: -4px !important;
   }
   .order-history-icon {
     background-size: 65%;
@@ -516,13 +564,16 @@ a:active {
     font-size: 8px;
   }
   #swap-nav-link {
-    width: 80px;
+    padding: 20px;
+    width: 90px;
   }
   #pool-nav-link {
-    width:80px;
+    padding: 20px;
+    width:90px;
   } 
   #bridge-nav-link {
-    width: 80px;
+    padding: 20px;
+    width: 90px;
   }
   /* #swap-page {
     margin-top: 40px;
@@ -536,6 +587,7 @@ a:active {
   }
   #swap-button {
     font-size: 12px !important;
+    height: 32px !important;
   }
   .dHkjAk {
     margin-bottom: 0px !important;
@@ -547,7 +599,7 @@ a:active {
     height: 30px !important;
   }
   .symbol-input {
-    width: 100px !important;
+    width: 85px !important;
     height: 24px !important;
   }
   .media-padding {
@@ -558,19 +610,19 @@ a:active {
     height: auto !important;
   }
   .dark-input {
-    height: 45px !important;
+    /* height: 45px !important; */
   }
 }
 
 @media(max-width: 375px) {
   #swap-nav-link {
-    width: 70px;
+    width: 80px;
   }
   #pool-nav-link {
-    width:60px;
+    width: 80px;
   } 
   #bridge-nav-link {
-    width: 60px;
+    width: 80px;
   }
 }
 @media(max-width: 330px) {
