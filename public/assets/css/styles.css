@@ -5,8 +5,14 @@ background-repeat: no-repeat;
 padding: 0;
 } */
 
+html, body {
+  height: 100%;
+}
+
 body {
+  margin:0;
   overflow-x: hidden;
+  font-family: 'Mosk' !important;
 }
 
 .ghost {
@@ -143,14 +149,22 @@ body {
   background: rgb(97,49, 159) 0% 0% no-repeat padding-box;
   /* height: 55px; */
 }
+.p-gradient {
+  background: transparent linear-gradient(276deg, #FF1FFF 0%, #970ACB 100%) 0% 0% no-repeat padding-box !important;
+  border-radius: 4px;
+  opacity: 1;
+  font-family: 'Mosk' !important;
+}
 .pink-gredient {
   /* background: transparent linear-gradient(90deg, #ff1fff 0%, #a700ff 100%) 0% 0% no-repeat padding-box; */
   border: 1px solid #FF1FFF !important;
   background: transparent !important;
   border-radius: 4px;
   opacity: 1;
+  font-family: 'Mosk' !important;
 }
 .footer-bg {
+  margin-top: 150px;
 }
 .footer-icon {
   width: 99%;
@@ -672,28 +686,74 @@ a:active {
   color: gray !important;
 }
 
-/* @font-face {
-  font-family: 'MoskNormal';
+
+@font-face { 
+  font-family: 'Mosk';
+  src: local('Mosk'), url('../fonts/Mosk_Typeface/Mosk\ Normal\ 400.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/Mosk Normal 400.tff') format('tff');
-  }
-  body * {
-      font-family: MoskNormal !important;
-  }
-.mosk-bold-700{
-  font-family:'Mosk Bold 700';
-  font-weight:normal;
 }
-.fs-20{
-  font-size: 20px !important;
-} */
+@font-face { 
+  font-family: 'Mosk';
+  src: local('Mosk'), url('../fonts/Mosk_Typeface/Mosk\ Ultra-Bold\ 900.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face { 
+  font-family: 'Mosk';
+  src: local('Mosk'), url('../fonts/Mosk_Typeface/Mosk\ Extra-Bold\ 800.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face { 
+  font-family: 'Mosk';
+  src: local('Mosk'), url('../fonts/Mosk_Typeface/Mosk\ Bold\ 700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face { 
+  font-family: 'Mosk';
+  src: local('Mosk'), url('../fonts/Mosk_Typeface/Mosk\ Extra-Light\ 200.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face { 
+  font-family: 'Mosk';
+  src: local('Mosk'), url('../fonts/Mosk_Typeface/Mosk\ Light\ 300.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face { 
+  font-family: 'Mosk';
+  src: local('Mosk'), url('../fonts/Mosk_Typeface/Mosk\ Semi-Bold\ 600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face { 
+  font-family: 'Mosk';
+  src: local('Mosk'), url('../fonts/Mosk_Typeface/Mosk\ Thin\ 100.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
 
 .footer-image {
-  width: 427px;
+  width: 323px;
 }
 
-@media(max-width : 500px) {
+.no-padding {
+  padding: 0px !important;
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footer-text {
+  font-family: 'Mosk';
+  font-size: 18px;
+}
+
+@media(max-width : 600px) {
   .footer-image {
     width: 250px;
   }

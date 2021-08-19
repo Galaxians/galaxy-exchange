@@ -33,6 +33,7 @@ const AppWrapper = styled.div`
 `
 
 const BodyWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -151,6 +152,7 @@ export default function App() {
                     <Route component={RedirectPathToSwapOnly} />
                   </Switch>
                 </Web3ReactManager>
+                <Footer />
                 <Marginer />
               </BodyWrapper>
               {/* </div> */}
@@ -158,7 +160,6 @@ export default function App() {
             </TranslationsContext.Provider>
           </LanguageContext.Provider>
         </AppWrapper>
-        <Footer />
       </HashRouter>
     </Suspense>
   )

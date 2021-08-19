@@ -9,6 +9,7 @@ export const BodyWrapper = styled(Card)`
   width: 100%;
   z-index: 5;
   padding: 29px;
+  border-radius: 11px;
   //background: #0b001e 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 99px #ff1fff38;
   @media(max-width: 478px) {
@@ -20,8 +21,8 @@ export const BodyWrapper = styled(Card)`
 export const Body = styled.div`
   width: auto;
   border: 1px solid #FF1FFF;
-  border-radius: 5px;
-  margin-top: 50px;
+  border-radius: 11px;
+  margin-top: 100px;
   @media(max-width : 478px) {
     width: 99%;
     // padding: 5px;
