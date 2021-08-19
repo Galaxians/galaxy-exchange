@@ -169,7 +169,7 @@ export default function Navbar({toggle}) {
               ) : (
                 <Button
                 className="btn text-white xrounded "
-                style={{marginLeft:'70px',fontWeight: 800, height: '40px', width:'140px', background: 'transparent', border: '1px solid #FF1FFF'}}
+                style={{marginLeft:'70px',fontWeight: 600, height: '40px', width:'140px', background: 'transparent', border: '1px solid #FF1FFF'}}
                   onClick={() => {
                     onPresentConnectModal()
                   }}
