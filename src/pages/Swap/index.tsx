@@ -35,6 +35,7 @@ import PageHeader from 'components/PageHeader'
 import ConnectWalletButton from 'components/ConnectWalletButton'
 import LeftSidebar from 'pagecomponent/LeftSidebar'
 import RightSidebar from 'pagecomponent/RightSidebar'
+
 import AppBody from '../AppBody'
 
 const Swap = () => {
@@ -84,13 +85,13 @@ const Swap = () => {
 
   const parsedAmounts = showWrap
     ? {
-        [Field.INPUT]: parsedAmount,
-        [Field.OUTPUT]: parsedAmount,
-      }
+      [Field.INPUT]: parsedAmount,
+      [Field.OUTPUT]: parsedAmount,
+    }
     : {
-        [Field.INPUT]: independentField === Field.INPUT ? parsedAmount : trade?.inputAmount,
-        [Field.OUTPUT]: independentField === Field.OUTPUT ? parsedAmount : trade?.outputAmount,
-      }
+      [Field.INPUT]: independentField === Field.INPUT ? parsedAmount : trade?.inputAmount,
+      [Field.OUTPUT]: independentField === Field.OUTPUT ? parsedAmount : trade?.outputAmount,
+    }
 
   const { onSwitchTokens, onCurrencySelection, onUserInput, onChangeRecipient } = useSwapActionHandlers()
   const isValid = !swapInputError
@@ -271,7 +272,7 @@ const Swap = () => {
 
   return (
     <>
-    {/* <div className="row">
+      {/* <div className="row">
       <div className="d-flex justify-content-left leftnav col-auto">
            <ul className="list-unstyled">
 
@@ -283,11 +284,6 @@ const Swap = () => {
            </ul>
       </div>
       <div className="rightpart col-auto"> */}
-      <RightSidebar isOpen={!handleRight} toggle={fhandleRight}/>
-
-      <LeftSidebar isOpen={handleLeft} toggle={fhandleLeft}/>
-
-      <br />
       <TokenWarningModal
         isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning}
         tokens={urlLoadedTokens}
@@ -298,7 +294,8 @@ const Swap = () => {
         transactionType={syrupTransactionType}
         onConfirm={handleConfirmSyrupWarning}
       />
-
+      <RightSidebar isOpen={!handleRight} toggle={fhandleRight} />
+      <LeftSidebar isOpen={handleLeft} toggle={fhandleLeft} />
       <AppBody>
         <CardNav />
         <Wrapper id="swap-page">
@@ -315,10 +312,10 @@ const Swap = () => {
             swapErrorMessage={swapErrorMessage}
             onDismiss={handleConfirmDismiss}
           />
-          
-          <CardBody style={{padding: '0px'}}>
+
+          <CardBody style={{ padding: '0px' }}>
             <AutoColumn gap="md">
-            
+
               <CurrencyInputPanel
                 label={
                   independentField === Field.OUTPUT && !showWrap && trade
@@ -333,7 +330,7 @@ const Swap = () => {
                 onCurrencySelect={handleInputSelect}
                 otherCurrency={currencies[Field.OUTPUT]}
                 id="swap-currency-input"
-                
+
               />
               <AutoColumn justify="space-between">
                 <AutoRow justify={isExpertMode ? 'space-between' : 'left'} style={{ padding: '0 2rem' }}>
@@ -345,7 +342,7 @@ const Swap = () => {
                         setApprovalSubmitted(false) // reset 2 step UI for approvals
                         onSwitchTokens()
                       }}
-                      style={{ borderRadius: '50%', textAlign:'left', backgroundColor:'#271049' }}
+                      style={{ borderRadius: '50%', textAlign: 'left', backgroundColor: '#271049' }}
                       scale="sm"
                     >
                       <ArrowDownIcon color="primary" width="29px" />
@@ -371,7 +368,7 @@ const Swap = () => {
                 onCurrencySelect={handleOutputSelect}
                 otherCurrency={currencies[Field.INPUT]}
                 id="swap-currency-output"
-                
+
               />
 
               {recipient !== null && !showWrap ? (
@@ -413,7 +410,7 @@ const Swap = () => {
             </AutoColumn>
             <BottomGrouping>
               {!account ? (
-                <ConnectWalletButton width="100%"/>
+                <ConnectWalletButton width="100%" />
               ) : showWrap ? (
                 <Button disabled={Boolean(wrapInputError)} onClick={onWrap} width="100%">
                   {wrapInputError ??

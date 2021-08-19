@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react'
+import React, { useContext, useMemo, useState } from 'react'
 import { ThemeContext } from 'styled-components'
 import { Pair } from '@pancakeswap-libs/sdk'
 import { Button, CardBody, Text } from 'glx-uikit'
@@ -18,6 +18,8 @@ import { toV2LiquidityToken, useTrackedTokenPairs } from 'state/user/hooks'
 import { Dots } from 'components/swap/styleds'
 import useI18n from 'hooks/useI18n'
 import PageHeader from 'components/PageHeader'
+import LeftSidebar from 'pagecomponent/LeftSidebar'
+import RightSidebar from 'pagecomponent/RightSidebar'
 import AppBody from '../AppBody'
 
 export default function Pool() {
@@ -54,21 +56,31 @@ export default function Pool() {
     fetchingV2PairBalances || v2Pairs?.length < liquidityTokensWithBalances.length || v2Pairs?.some((V2Pair) => !V2Pair)
 
   const allV2PairsWithLiquidity = v2Pairs.map(([, pair]) => pair).filter((v2Pair): v2Pair is Pair => Boolean(v2Pair))
+  
+  const [handleLeft, changeHandleLeft] = useState(false);
+  const [handleRight, changeHandleRight] = useState(false);
+
+
+  const fhandleLeft = () => {
+    changeHandleLeft(!handleLeft);
+  }
+
+  const fhandleRight = () => {
+    changeHandleRight(!handleRight);
+  }
 
   return (
     <>
-      <div className="h1 text-white text-center mt-5">Liquidity</div>
-      <div className="fs6 pink-color">Add liquidity to receive LP tokens</div>
-      <br />
-
+      <RightSidebar isOpen={!handleRight} toggle={fhandleRight} />
+      <LeftSidebar isOpen={handleLeft} toggle={fhandleLeft} />
       <AppBody>
         <CardNav activeIndex={1} />
         {/* <PageHeader title={TranslateString(262, '')} description={TranslateString(1168, '')}>
 
         </PageHeader> */}
         <Button
-          className="pink-gredient"
-          style={{ width: '92%', marginLeft: '4%', borderRadius: '4px' }}
+          className="p-gradient"
+          style={{ width: '100%', borderRadius: '4px' }}
           id="join-pool-button"
           as={Link}
           to="/add/BNB"
@@ -76,9 +88,8 @@ export default function Pool() {
           {TranslateString(168, 'Add Liquidity')}
         </Button>
         <AutoColumn justify="center">
-          <CardBody>
             <AutoColumn gap="12px" style={{ width: '100%' }}>
-              <RowBetween padding="0 8px">
+              <RowBetween padding="10px 0px">
                 <Text color={theme.colors.text}>{TranslateString(107, 'Your Liquidity')}</Text>
                 <Question
                   text={TranslateString(
@@ -90,16 +101,16 @@ export default function Pool() {
 
               {!account ? (
                 <LightCard
-                  style={{ width: '100%', borderRadius: '6px', borderColor: '#696272', background: '#696272' }}
+                  style={{ width: '100%', borderRadius: '6px', borderColor: '#696272', background: '#696272 0% 0% no-repeat padding-box', opacity: '0.33' }}
                   padding="40px"
                 >
-                  <Text color="textDisabled" textAlign="center">
+                  <Text style={{color: 'white'}} textAlign="center">
                     {TranslateString(156, 'Connect to a wallet to view your liquidity.')}
                   </Text>
                 </LightCard>
               ) : v2IsLoading ? (
                 <LightCard padding="40px">
-                  <Text color="textDisabled" textAlign="center">
+                  <Text style={{color: 'white'}} textAlign="center">
                     <Dots>Loading</Dots>
                   </Text>
                 </LightCard>
@@ -111,7 +122,7 @@ export default function Pool() {
                 </>
               ) : (
                 <LightCard padding="40px">
-                  <Text color="textDisabled" textAlign="center">
+                  <Text style={{color: 'white'}} textAlign="center">
                     {TranslateString(104, 'No liquidity found.')}
                   </Text>
                 </LightCard>
@@ -129,7 +140,6 @@ export default function Pool() {
                 </Text>
               </div>
             </AutoColumn>
-          </CardBody>
         </AutoColumn>
       </AppBody>
     </>
