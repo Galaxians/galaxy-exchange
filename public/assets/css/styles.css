@@ -558,8 +558,14 @@ a:active {
   }
 }
 
-@media(max-width: 447px) {
+.res-text {
+  font-size: 12px !important;
+}
 
+@media(max-width: 447px) {
+  .res-text {
+    font-size: 8px !important;
+  }
   .connect_btn {
     height: 32px !important;
   }

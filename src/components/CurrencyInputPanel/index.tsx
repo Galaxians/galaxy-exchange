@@ -120,7 +120,7 @@ export default function CurrencyInputPanel({
     <InputPanel id={id}>
       <Container hideInput={hideInput}>
         <div className="row">
-          <div className="col-auto" style={{ alignSelf: 'center', marginLeft: '8px', paddingTop: '0.3rem'}}>
+          <div className="col-auto" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignSelf: 'center', marginLeft: '8px', height: '48px'}}>
             <CurrencySelect
               style={{ textAlign: 'left'}}
               selected={!!currency}
@@ -160,7 +160,7 @@ export default function CurrencyInputPanel({
                   <RowBetween>
                     {/* <Text fontSize="14px">{translatedLabel}</Text> */}
                     {account && currency && (
-                      <Text onClick={onMax} fontSize="10px" style={{ marginLeft: '4px', marginTop: '4px', display: 'inline', cursor: 'pointer'}}>
+                      <Text onClick={onMax} className="res-text" style={{ marginLeft: '4px', marginTop: '4px', display: 'inline', cursor: 'pointer'}}>
                         {!hideBalance && !!currency && selectedCurrencyBalance
                           ? `Balance: ${selectedCurrencyBalance?.toSignificant(6)} ${show_currency}`
                           : ' -'}
@@ -173,7 +173,7 @@ export default function CurrencyInputPanel({
                 <LabelRow style={{padding: '0px'}}>
                   <RowBetween>
                     {currency && (
-                      <Text onClick={onMax} fontSize="10px" style={{ marginLeft: '4px', marginTop: '4px', display: 'inline', cursor: 'pointer'}}>
+                      <Text onClick={onMax} className="res-text" style={{ marginLeft: '4px', marginTop: '4px', display: 'inline', cursor: 'pointer'}}>
                       {`Balance: 1.5 ${show_currency}`}
                       </Text>
                     )}
