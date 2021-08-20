@@ -61,10 +61,10 @@ export default function LeftSidebar({ isOpen, toggle }) {
             </div>
 
             <div style={{ marginTop: '20px', height: '70px', backgroundColor: 'rgb(0, 0, 0)', color: 'white', opacity: '0.43', alignItems: 'center', justifyContent: 'center', display: 'flex' }}>
-                Ad Space 303 * 99
+                {/* Ad Space 303 * 99 */}
             </div>
 
-            <div style={{ marginTop: '300px', height: '120px', padding: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div style={{ marginTop: '350px', height: '120px', padding: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div style={{ color: 'white', fontSize: '22px', display: 'flex' }}><img src="./assets/img/Galaxia-token-color-250px.png" alt="Galaxy Swap" style={{ width: "24px" }} /><div style={{ marginLeft: '12px', fontFamily: 'monospace' }}>$ 0,063</div></div>
                 <div style={{ color: 'rgb(201, 187, 206)', display: 'flex', alignItems: 'center', marginTop: '16px' }}><img src="./assets/img/bscscan-icon.svg" alt="bscscan" style={{ width: "24px" }} /><div style={{ fontSize: '12px' }}>GALAXIA Transactions</div></div>
                 <div style={{ color: 'rgb(201, 187, 206)', display: 'flex', alignItems: 'center' }}><img src="./assets/img/bscscan-icon.svg" alt="bscscan" style={{ width: "24px" }} /><div style={{ fontSize: '12px' }}>GALAXIA Contracts</div></div>

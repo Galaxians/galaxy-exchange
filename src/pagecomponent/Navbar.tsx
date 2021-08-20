@@ -88,7 +88,7 @@ export default function Navbar({toggle}) {
 
   return (
     <div className="container-fluid top-nav-bg">
-      <nav className="navbar navbar-dark navbar-expand-lg">
+      <nav className="navbar navbar-dark navbar-expand-lg" style={{paddingTop: '1rem', paddingBottom: '1rem'}}>
         <div className="container-fluid">
           <div style={{display:"flex"}}>
           <button type="submit" data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="/navcol-1" style={{marginTop:'0px', marginLeft:'-15px' ,alignSelf: 'center', border: 'unset'}} onClick={toggle}>
@@ -138,7 +138,7 @@ export default function Navbar({toggle}) {
               <li className="nav-item" style={{display:'inline-flex'}}>
               <StyledLink to="/exchange" rel="noreferrer" onClick={() => setCurrent("exchange")} style={current === "exchange" ? {background: 'transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box'} : {}} >
                   <span>EXCHANGE</span>
-                 <div style={{position:'absolute',top:0,left:0,height:'100%', borderRadius: '10px'}} />
+                  {current !== "exchange" && <div style={{position:'absolute',top:0,left:0,height:'100%', borderRadius: '10px'}} />}
                 </StyledLink>
                 <StyledLink to="/farms" rel="noreferrer" onClick={() => setCurrent("farms")} style={current === "farms" ? {background: 'transparent linear-gradient(90deg, #FF1FFF 0%, #440C8B 100%) 0% 0% no-repeat padding-box'} : {}} >
                   <span>FARMS</span>
