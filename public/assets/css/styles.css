@@ -710,7 +710,7 @@ a:hover {
 
 .token-amount-input {
   height: 32px !important;
-  font-size: 24px;
+  font-size: 20px !important;
   font-family: 'Mosk' !important; 
 }
 

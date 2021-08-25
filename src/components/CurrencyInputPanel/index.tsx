@@ -120,7 +120,7 @@ export default function CurrencyInputPanel({
     <InputPanel id={id}>
       <Container hideInput={hideInput}>
         <div className="row">
-          <div className="col-auto" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignSelf: 'center', marginLeft: '8px', height: '48px'}}>
+          <div className="col-auto" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignSelf: 'center', marginLeft: '8px', height: '48px', paddingRight: '0px'}}>
             <CurrencySelect
               style={{ textAlign: 'left'}}
               selected={!!currency}
@@ -189,7 +189,6 @@ export default function CurrencyInputPanel({
                   <>
                     <NumericalInput
                       className="token-amount-input"
-                      style={{ height: '32px', fontSize: '24px', fontFamily: 'Mosk', fontWeight: 700 }}
                       value={value}
                       onUserInput={(val) => {
                         onUserInput(val)
