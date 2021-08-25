@@ -22,6 +22,7 @@ export const SidebarContainer = styled.aside<{ isOpen: any }>`
   @media(min-width: 990px) {
     display: none;
   }
+  overflow: auto;
   ::-webkit-scrollbar {
     width: 0px;
   }
