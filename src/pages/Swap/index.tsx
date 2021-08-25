@@ -294,7 +294,7 @@ const Swap = () => {
         transactionType={syrupTransactionType}
         onConfirm={handleConfirmSyrupWarning}
       />
-      <RightSidebar isOpen={!handleRight} toggle={fhandleRight} />
+      {/* <RightSidebar isOpen={!handleRight} toggle={fhandleRight} /> */}
       <LeftSidebar isOpen={handleLeft} toggle={fhandleLeft} />
       <AppBody>
         <CardNav />

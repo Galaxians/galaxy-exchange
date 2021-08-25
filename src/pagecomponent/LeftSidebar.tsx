@@ -34,7 +34,7 @@ export default function LeftSidebar({ isOpen, toggle }) {
     const history = useHistory()
     const path = history.location.pathname
 
-    if(path !== "/swap" && path !=="/pool")   return (<></>)
+    if(path !== "/swap" && path !=="/pool" && path !== "/add/BNB")   return (<></>)
 
     return (
         <SidebarContainer isOpen={isOpen}>

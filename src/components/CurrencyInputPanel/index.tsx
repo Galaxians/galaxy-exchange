@@ -189,7 +189,7 @@ export default function CurrencyInputPanel({
                   <>
                     <NumericalInput
                       className="token-amount-input"
-                      style={{ height: '32px', fontSize: '24px', fontFamily: 'Mosk' }}
+                      style={{ height: '32px', fontSize: '24px', fontFamily: 'Mosk', fontWeight: 700 }}
                       value={value}
                       onUserInput={(val) => {
                         onUserInput(val)
