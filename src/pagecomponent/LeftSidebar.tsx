@@ -20,7 +20,7 @@ export const SidebarContainer = styled.div<{ isOpen: any; }>`
   >div:last-of-type {
       transform: ${({ isOpen }) => isOpen ? 'rotateY(180deg)' : 'rotateY(0deg)'};
   }
-  @media (max-width: 991px) {
+  @media (max-width: 1100px) {
     display: none;
   }
 `;
@@ -34,7 +34,7 @@ export default function LeftSidebar({ isOpen, toggle }) {
     const history = useHistory()
     const path = history.location.pathname
 
-    if(path !== "/swap" && path !=="/pool")   return (<></>)
+    if(path !== "/swap" && path !=="/pool" && path !== "/add/BNB")   return (<></>)
 
     return (
         <SidebarContainer isOpen={isOpen}>

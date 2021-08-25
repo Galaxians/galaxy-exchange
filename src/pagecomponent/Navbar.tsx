@@ -21,7 +21,10 @@ export const StyledLink = styled(Link)`
   cursor: pointer;
   height: 44px;
   width: 146px;
-  > span {
+  * {
+    font-family : 'Mosk';
+  }
+  >span {
     font-size: 15px;
     font-family: Mosk;
     font-weight: 300;
@@ -35,11 +38,12 @@ export const StyledLink = styled(Link)`
   &:hover {
     color: white !important;
     > div {
-      background: transparent linear-gradient(90deg, #ff1fff 0%, #440c8b 100%) 0% 0% no-repeat padding-box;
+      background: transparent linear-gradient(90deg, #ff1fff 0%, #440c8b 100%)
+        0% 0% no-repeat padding-box;
       width: 100%;
     }
   }
-`
+`;
 export const StyledA = styled.a`
   margin-left: 25px;
   border: 1px solid #ff1fff;
@@ -55,7 +59,10 @@ export const StyledA = styled.a`
   cursor: pointer;
   height: 44px;
   width: 146px;
-  > span {
+  * {
+    font-family : 'Mosk';
+  } 
+  >span {
     font-size: 15px;
     font-family: monospace;
     z-index: 1;
@@ -74,19 +81,62 @@ export const StyledA = styled.a`
   }
 `
 
+const StyledButton = styled.button`
+  margin-left: 25px;
+  border: 1px solid #FF1FFF;
+  text-align: center;
+  border-radius: 10px;
+  color: gray;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  height: 44px;
+  width: 146px;
+  > span {
+    font-size: 15px;
+    font-family: monospace;
+    z-index: 1;
+  }
+  > div {
+    transition: 1s;
+    width: 0%;
+  }
+  &:hover {
+    color: white !important;
+    > div {
+      background: transparent linear-gradient(90deg, #ff1fff 0%, #440c8b 100%)
+        0% 0% no-repeat padding-box;
+      width: 100%;
+    }
+  }
+`;
+
 export default function Navbar({ toggle }) {
-  const { account, activate, deactivate } = useWeb3React()
-  const { login, logout } = useAuth()
-  const [current, setCurrent] = useState('')
+  const { account, activate, deactivate } = useWeb3React();
+  const { login, logout } = useAuth();
+  const [current, setCurrent] = useState("");
   //   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   //   const { isDark, toggleTheme } = useTheme()
   //   const priceData = useGetPriceData()
   //   const cakePriceUsd = priceData ? Number(priceData.prices.Cake) : undefined
   //   const profile = useGetLocalProfile()
 
-  const { onPresentConnectModal, onPresentAccountModal } = UikitMenu(login, deactivate, account as string)
-  const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null
-  const history = useHistory()
+  const { onPresentConnectModal, onPresentAccountModal } = UikitMenu(
+    login,
+    deactivate,
+    account as string
+  );
+  const accountEllipsis = account
+    ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}`
+    : null;
+  const history = useHistory();
+  
+  useEffect(() => {
+    setCurrent(history.location.pathname);
+  }, [history.location.pathname]);
 
   return (
     <div className="container-fluid top-nav-bg">
@@ -124,7 +174,7 @@ export default function Navbar({ toggle }) {
           <div className="nav-btn-show">
             <span className="navbar-text actions">
               <div>
-                {account ? (
+              {account ? (
                   <Button
                     className="btn text-white xrounded "
                     style={{ height: '25px', fontSize: '12px', background: 'transparent', border: '1px solid #FF1FFF' }}
@@ -195,7 +245,6 @@ export default function Navbar({ toggle }) {
                       : {}
                   }
                 >
-                  <span>FARMS</span>
                   {current !== 'farms' && (
                     <div style={{ position: 'absolute', top: 0, left: 0, height: '100%', borderRadius: '10px' }} />
                   )}

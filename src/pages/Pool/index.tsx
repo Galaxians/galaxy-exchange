@@ -71,7 +71,7 @@ export default function Pool() {
 
   return (
     <>
-      <RightSidebar isOpen={!handleRight} toggle={fhandleRight} />
+      {/* <RightSidebar isOpen={!handleRight} toggle={fhandleRight} /> */}
       <LeftSidebar isOpen={handleLeft} toggle={fhandleLeft} />
       <AppBody>
         <CardNav activeIndex={1} />
@@ -79,8 +79,7 @@ export default function Pool() {
 
         </PageHeader> */}
         <Button
-          className="p-gradient"
-          style={{ width: '100%', borderRadius: '4px' }}
+          className="p-gradient liquidity_btn"
           id="join-pool-button"
           as={Link}
           to="/add/BNB"

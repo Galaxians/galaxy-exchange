@@ -29,6 +29,7 @@ import { wrappedCurrency } from 'utils/wrappedCurrency'
 import { currencyId } from 'utils/currencyId'
 import Pane from 'components/Pane'
 import ConnectWalletButton from 'components/ConnectWalletButton'
+import LeftSidebar from 'pagecomponent/LeftSidebar'
 import useI18n from 'hooks/useI18n'
 import AppBody from '../AppBody'
 import { Dots, Wrapper } from '../Pool/styleds'
@@ -287,11 +288,17 @@ export default function AddLiquidity({
     setTxHash('')
   }, [onFieldAInput, txHash])
 
+  const [handleLeft, changeHandleLeft] = useState(false);
+
+  const fhandleLeft = () => {
+    changeHandleLeft(!handleLeft);
+  }
+
   return (
     <>
-      <div className="h1 text-white text-center mt-5">Add Liquidity</div>
-    <div className="fs6 pink-color">Add liquidity to receive LP tokens</div><br/>
-
+      {/* <div className="h1 text-white text-center mt-5">Add Liquidity</div>
+    <div className="fs6 pink-color">Add liquidity to receive LP tokens</div><br/> */}
+      <LeftSidebar isOpen={handleLeft} toggle={fhandleLeft} />
       <AppBody>
       <CardNav activeIndex={1} />
         {/* <AddRemoveTabs adding /> */}
