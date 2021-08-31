@@ -122,7 +122,7 @@ export default function CurrencyInputPanel({
         <div className="row">
           <div className="col-auto" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignSelf: 'center', marginLeft: '8px', height: '48px', paddingRight: '0px'}}>
             <CurrencySelect
-              style={{ textAlign: 'left'}}
+              style={{ textAlign: 'left', fontFamily: 'Mosk'}}
               selected={!!currency}
               
               className="symbol-input"
@@ -143,7 +143,7 @@ export default function CurrencyInputPanel({
                     {pair?.token0.symbol}:{pair?.token1.symbol}
                   </Text>
                 ) : (
-                  <Text className="nav-menu-item" style={{width: '100%', textAlign: 'center'}}>
+                  <Text className="nav-menu-item" style={{width: '100%', textAlign: 'center', fontFamily: 'Mosk'}}>
                     {(currency && currency.symbol && currency.symbol.length > 20
                       ? `${currency.symbol.slice(0, 4)}...${currency.symbol.slice(
                           currency.symbol.length - 5,
@@ -160,7 +160,7 @@ export default function CurrencyInputPanel({
                   <RowBetween>
                     {/* <Text fontSize="14px">{translatedLabel}</Text> */}
                     {account && currency && (
-                      <Text onClick={onMax} className="res-text" style={{ marginLeft: '4px', marginTop: '4px', display: 'inline', cursor: 'pointer'}}>
+                      <Text onClick={onMax} className="res-text" style={{ marginLeft: '4px', marginTop: '4px', display: 'inline', cursor: 'pointer', fontFamily: 'Mosk'}}>
                         {!hideBalance && !!currency && selectedCurrencyBalance
                           ? `Balance: ${selectedCurrencyBalance?.toSignificant(6)} ${show_currency}`
                           : ' -'}
@@ -173,7 +173,7 @@ export default function CurrencyInputPanel({
                 <LabelRow style={{padding: '0px'}}>
                   <RowBetween>
                     {currency && (
-                      <Text onClick={onMax} className="res-text" style={{ marginLeft: '4px', marginTop: '4px', display: 'inline', cursor: 'pointer'}}>
+                      <Text onClick={onMax} className="res-text" style={{ marginLeft: '4px', marginTop: '4px', display: 'inline', cursor: 'pointer', fontFamily: 'Mosk'}}>
                       {`Balance: 1.5 ${show_currency}`}
                       </Text>
                     )}
@@ -195,7 +195,7 @@ export default function CurrencyInputPanel({
                       }}
                     />
                     {account && currency && showMaxButton && label !== 'To' && (
-                      <Button onClick={onMax} scale="sm" variant="text" style={{height: 'auto'}}>
+                      <Button onClick={onMax} scale="sm" variant="text" style={{height: 'auto', fontFamily: 'Mosk'}}>
                         MAX
                       </Button>
                     )}
