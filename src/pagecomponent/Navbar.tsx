@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, useWalletModal as UikitMenu } from 'glx-uikit'
 import { useHistory, Link } from 'react-router-dom'
 import { useWeb3React } from '@web3-react/core'
@@ -26,8 +26,7 @@ export const StyledLink = styled(Link)`
   }
   >span {
     font-size: 15px;
-    font-family: Mosk;
-    font-weight: 300;
+    font-family: 'Mosk';
     z-index: 1;
   }
   > div {
@@ -64,7 +63,7 @@ export const StyledA = styled.a`
   } 
   >span {
     font-size: 15px;
-    font-family: monospace;
+    font-family: 'Mosk';
     z-index: 1;
   }
   > div {
@@ -97,7 +96,7 @@ const StyledButton = styled.button`
   width: 146px;
   > span {
     font-size: 15px;
-    font-family: monospace;
+    font-family: 'Mosk';
     z-index: 1;
   }
   > div {

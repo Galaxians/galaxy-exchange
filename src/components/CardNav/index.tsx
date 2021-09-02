@@ -27,7 +27,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
                 className="nav-menu-item"
                 style={{
-                  
+                  fontFamily: 'Mosk',
                   background: 'transparent',
                   border: '1px solid #FF00FF',
                   borderRadius: '8px',
@@ -42,7 +42,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item color-gray"
                 style={{
-
+                  fontFamily: 'Mosk',
                   background: 'transparent',
                   border: '1px solid rgb(30, 25, 37)',
                   borderRadius: '8px',
@@ -58,7 +58,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item"
                 style={{
-
+                  fontFamily: 'Mosk',
                   background: 'transparent',
                   borderRadius: '8px',
                   border: '1px solid #FF00FF',
@@ -73,7 +73,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item color-gray"
                 style={{
-
+                  fontFamily: 'Mosk',
                   background: 'transparent',
                   border: '1px solid rgb(30, 25, 37)',
                   borderRadius: '8px',
@@ -90,7 +90,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item"
                 style={{
-
+                  fontFamily: 'Mosk',
                   background: 'transparent',
                   borderRadius: '8px',
                   border: '1px solid #FF00FF',
@@ -107,7 +107,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
               <ButtonMenuItem
               className="nav-menu-item color-gray"
                 style={{
-
+                  fontFamily: 'Mosk',
                   background: 'transparent',
                   border: '1px solid rgb(30, 25, 37)',
                   borderRadius: '8px',
