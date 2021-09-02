@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Button, useWalletModal as UikitMenu } from 'glx-uikit'
 import { useHistory, Link } from 'react-router-dom'
 import { useWeb3React } from '@web3-react/core'
