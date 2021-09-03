@@ -152,6 +152,7 @@ export default function App() {
                     <Route component={RedirectPathToSwapOnly} />
                   </Switch>
                 </Web3ReactManager>
+                {/* <div className="mobile_ghost" /> */}
                 <Footer />
                 <Marginer />
               </BodyWrapper>
