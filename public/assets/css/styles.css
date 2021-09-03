@@ -14,14 +14,36 @@ body {
   overflow-x: hidden;
   font-family: 'Mosk' !important;
 }
-
-.ghost {
-  background: url(../img/Kal-artwork-giveaway-page.png);
+.backgroun-gredient{
+  background: url(../img/galaxyswap-background-3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: 70px;
   padding: 0;
+}
+.ghost {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: -120px;
+  padding: 0;
+}
+@media (min-width: 950px) {
+  .ghost{
+    background: url(../img/Kal-artwork-giveaway-page.png);
+  }
+}
+@media (max-width: 949px) {
+  .mobile_ghost{
+    height: 330px;
+    margin-left: 20px;
+    /* background-size: cover; */
+    /* background-size: auto;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background: url(../img/Kal-3D-seperate-2.png); */
+    background: url(../img/Kal-3D-seperate-2.png) no-repeat; 
+    background-size: 100%;
+  }
 }
 .setting-icon {
   background: url(../img/settings-icon.png);
