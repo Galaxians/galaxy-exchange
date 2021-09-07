@@ -14,6 +14,7 @@ import { usePairAdder } from 'state/user/hooks'
 import { useTokenBalance } from 'state/wallet/hooks'
 import { StyledInternalLink } from 'components/Shared'
 import { currencyId } from 'utils/currencyId'
+import LeftSidebar from 'pagecomponent/LeftSidebar'
 import useI18n from 'hooks/useI18n'
 import AppBody from '../AppBody'
 import { Dots } from '../Pool/styleds'
@@ -79,10 +80,15 @@ export default function PoolFinder() {
     </LightCard>
   )
 
+  const [handleLeft, changeHandleLeft] = useState(false);
+
+  const fhandleLeft = () => {
+    changeHandleLeft(!handleLeft);
+  }
+
   return (
     <>
-      <div className="h1 text-white mt-5">Import Pool</div><br/>
-
+      <LeftSidebar isOpen={handleLeft} toggle={fhandleLeft} />
       <AppBody>
       <CardNav activeIndex={1} />
         <FindPoolTabs />
@@ -131,7 +137,7 @@ export default function PoolFinder() {
                 hasPosition && pair ? (
                   <MinimalPositionCard pair={pair} />
                 ) : (
-                  <LightCard padding="45px 10px">
+                  <LightCard padding="45px 10px" style={{marginTop: '30px'}}>
                     <AutoColumn gap="sm" justify="center">
                       <Text style={{ textAlign: 'center' }}>
                         {TranslateString(212, 'You don’t have liquidity in this pool yet.')}
@@ -143,7 +149,7 @@ export default function PoolFinder() {
                   </LightCard>
                 )
               ) : validPairNoLiquidity ? (
-                <LightCard padding="45px 10px">
+                <LightCard padding="45px 10px" style={{marginTop: '30px'}}>
                   <AutoColumn gap="sm" justify="center">
                     <Text style={{ textAlign: 'center' }}>{TranslateString(214, 'No pool found.')}</Text>
                     <StyledInternalLink to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`}>
@@ -152,13 +158,13 @@ export default function PoolFinder() {
                   </AutoColumn>
                 </LightCard>
               ) : pairState === PairState.INVALID ? (
-                <LightCard padding="45px 10px">
+                <LightCard padding="45px 10px" style={{marginTop: '30px'}}>
                   <AutoColumn gap="sm" justify="center">
                     <Text style={{ textAlign: 'center' }}>{TranslateString(136, 'Invalid pair.')}</Text>
                   </AutoColumn>
                 </LightCard>
               ) : pairState === PairState.LOADING ? (
-                <LightCard padding="45px 10px">
+                <LightCard padding="45px 10px" style={{marginTop: '30px'}}>
                   <AutoColumn gap="sm" justify="center">
                     <Text style={{ textAlign: 'center' }}>
                       Loading
