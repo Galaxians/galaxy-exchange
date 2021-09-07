@@ -244,6 +244,7 @@ export default function Navbar({ toggle }) {
                       : {}
                   }
                 >
+                  <span>FARMS</span>
                   {current !== 'farms' && (
                     <div style={{ position: 'absolute', top: 0, left: 0, height: '100%', borderRadius: '10px' }} />
                   )}

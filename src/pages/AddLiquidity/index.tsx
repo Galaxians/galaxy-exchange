@@ -393,7 +393,7 @@ export default function AddLiquidity({
               {!account ? (
                 <ConnectWalletButton style={{marginTop:'30px'}} width="100%" />
               ) : (
-                <AutoColumn gap="md">
+                <AutoColumn gap="md" style={{marginTop:'30px'}}>
                   {(approvalA === ApprovalState.NOT_APPROVED ||
                     approvalA === ApprovalState.PENDING ||
                     approvalB === ApprovalState.NOT_APPROVED ||
